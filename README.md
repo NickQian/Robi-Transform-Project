@@ -7,3 +7,5 @@ The design of Robi is pretty good. We love it. But the software is not strong. T
 5. On hardware we firstly use a Raspberry Pi 2B plus sensor modules. May buy more powerful CPU(such as samsung's new series) later depends on the test result.
 
 2015.12.12
+
+contact the initiator: 729480514@qq.com
