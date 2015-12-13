@@ -4,7 +4,8 @@ The design of Robi is pretty good. We love it. But the software is not strong. T
 2. Create a dummy heart for Robi to make robi act as a real interest little guy. <br/>
 3. Add camera and face detection/recognization and sense of sapce where he is in. <br/>
 4. add more sensors to make it complementary to our human body. <br/>
-5. On hardware we firstly use a Raspberry Pi 2B plus sensor modules. May buy more powerful CPU(such as samsung's new series) later depends on the test result. <br/>
+5. Add AI to improve the user experience. <br/>
+6. On hardware we firstly use a Raspberry Pi 2B plus sensor modules. May buy more powerful CPU(such as samsung's new series) later depends on the test result. <br/>
 once the hardware is ready and begin to run something I will upload the files I have. <br/>
 
 2015.12.12 <br/>
