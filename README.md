@@ -17,4 +17,4 @@ On hardware we firstly use a Raspberry Pi 2B plus sensor modules. May buy more p
 Waht's Robi: http://www.robo-garage.com/en/prd/p_26/index.html  <br/> 
 designed by the 'strange' professor&CEO(ROBOGARAGE.Co.,Ltd) Tomotaka Takahashi  <br/> 
 Hardware & debug progress: http://blog.csdn.net/zister <br/>
-contact the initiator: 729480514@qq.com (once the hardware is ready and begin to run something I will upload the files I have.) <br/>
+contact the initiator: 729480514@qq.com (w-e-c-h-a-t: ckingcfx) <br/>
