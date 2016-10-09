@@ -1,0 +1,3 @@
+g++ peri.cpp futabaServo.cpp robiClib.cpp tts.cpp stt.cpp mic.cpp -fPIC -shared -o robiClib.so \
+-I/usr/include/python2.7 -L/usr/lib/python2.7 -L./speech/xunfei/onl_tts/libs/RaspberryPi \
+-lmsc -lasound

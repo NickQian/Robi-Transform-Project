@@ -1,0 +1,199 @@
+============================================================
+Time  2016/03/09 21:09:11 243 
+============================================================
+[2016/03/09 21:09:11 244] isr_1conn  2088 SYS_MSG_LOAD_CLOUD  
+[2016/03/09 21:09:11 248] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(74c9e910) 
+[2016/03/09 21:09:11 251] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_rslt_cb  param1 =  func(74c9f5f0) 
+[2016/03/09 21:09:11 253] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_err_cb  param1 =  func(74c9f720) 
+[2016/03/09 21:09:11 256] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_status_cb  param1 =  func(74c9f7e0) 
+[2016/03/09 21:09:11 258] isr_1conn  1382 onesoc  
+[2016/03/09 21:09:11 259] isr_1conn  1383 ASR_CLOUD_MSG_SSB  
+[2016/03/09 21:09:11 260] isr_1conn  1398 isr_1conn  cloud_cisr1PdHHBHbLaH8H5wyaaW4qHS4m725Kr  268436457  1428405382  
+[2016/03/09 21:09:11 261] isr_1conn  1466 not login!  
+[2016/03/09 21:09:11 262] isr_1conn  1578 nil  
+[2016/03/09 21:09:11 262] isr_1conn  1647 speex-wb  
+[2016/03/09 21:09:11 262] isr_1conn  1713 once bytes  122  
+[2016/03/09 21:09:11 265] isr_1conn  1734 User set url is   nil  
+[2016/03/09 21:09:11 265] transport  596  paramkvsport is   nil  
+[2016/03/09 21:09:11 265] transport  801  net type:  standard  
+[2016/03/09 21:09:11 266] transport  802  net operator:  def  
+[2016/03/09 21:09:11 266] transport  803  use proxy:  false  
+[2016/03/09 21:09:11 271] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:11 272] transport  1033 ns_i =  nil  
+[2016/03/09 21:09:11 422] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  1  
+[2016/03/09 21:09:11 573] isr_1conn  288  netperf:  99  
+[2016/03/09 21:09:11 623] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:11 828] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:11 874] isr_1conn  288  netperf:  81  
+[2016/03/09 21:09:12 028] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:12 176] isr_1conn  288  netperf:  72  
+[2016/03/09 21:09:12 227] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:12 434] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:12 477] isr_1conn  288  netperf:  64  
+[2016/03/09 21:09:12 635] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:12 778] isr_1conn  288  netperf:  54  
+[2016/03/09 21:09:12 844] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:12 847] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 21:09:13 030] isr_1conn  1758 ASR_CLOUD_MSG_AUW  3520  4  
+[2016/03/09 21:09:13 031] isr_1conn  1779 starttimer status_cb_timeout, timeout is:  3000  
+[2016/03/09 21:09:13 031] isr_1conn  1788 audio len:  61120  
+[2016/03/09 21:09:13 079] isr_1conn  288  netperf:  45  
+[2016/03/09 21:09:13 380] isr_1conn  288  netperf:  37  
+[2016/03/09 21:09:13 682] isr_1conn  288  netperf:  28  
+[2016/03/09 21:09:13 983] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:15 024] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:15 325] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:15 626] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:15 927] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:16 032] isr_1conn  236  The called number of status_cb_timeout:  1  
+[2016/03/09 21:09:16 228] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:16 273] transport  302  [dns] [0] timeout!   
+[2016/03/09 21:09:16 277] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:16 280] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  116.213.69.199  
+[2016/03/09 21:09:16 281] transport  1108 [soc] connect   116.213.69.199  80  
+[2016/03/09 21:09:16 530] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:16 831] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:17 133] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:17 435] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:17 737] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:18 038] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:18 340] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:18 641] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:18 942] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:19 035] isr_1conn  236  The called number of status_cb_timeout:  2  
+[2016/03/09 21:09:19 243] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:19 544] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:19 846] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:20 147] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:20 448] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:20 749] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:21 051] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:21 283] transport  315  soc_conn_failed  
+[2016/03/09 21:09:21 283] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:21 288] transport  384  switch 80  
+[2016/03/09 21:09:21 289] transport  403  MSC:[soc] [0] conn timeout!  
+[2016/03/09 21:09:21 289] transport  1139 [soc] disconnect   
+[2016/03/09 21:09:21 290] transport  406  soc_conn_timeout, try2conn_times =  1  
+[2016/03/09 21:09:21 294] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:21 295] transport  1033 ns_i =  nil  
+[2016/03/09 21:09:21 352] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:21 654] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:21 956] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:22 036] isr_1conn  236  The called number of status_cb_timeout:  3  
+[2016/03/09 21:09:22 258] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:22 560] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:22 862] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:23 163] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:23 464] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:23 766] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:24 067] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:24 368] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:24 669] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:24 970] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:25 038] isr_1conn  236  The called number of status_cb_timeout:  4  
+[2016/03/09 21:09:25 271] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:25 573] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:25 874] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:26 179] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:26 296] transport  302  [dns] [0] timeout!   
+[2016/03/09 21:09:26 300] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:26 305] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  116.213.69.199  
+[2016/03/09 21:09:26 306] transport  1108 [soc] connect   116.213.69.199  80  
+[2016/03/09 21:09:26 480] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:26 782] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:27 083] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:27 385] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:27 687] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:27 989] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:28 030] isr_1conn  754  start a new session  
+[2016/03/09 21:09:28 034] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 21:09:28 034] transport  1139 [soc] disconnect   
+[2016/03/09 21:09:28 041] isr_1conn  1154 no_audio is true  
+[2016/03/09 21:09:28 041] isr_1conn  1182 [session] send 1th audio  
+[2016/03/09 21:09:28 042] isr_1conn  1184 totalsz =   5795  
+[2016/03/09 21:09:28 042] isr_1conn  1187 start netperf_fs_timer  
+[2016/03/09 21:09:28 051] isr_1conn  1208 [session] send last audio!  
+[2016/03/09 21:09:28 290] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:28 591] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:28 843] isr_1conn  333  send_ok_num, timer_num, send_average =   0  2  0  
+[2016/03/09 21:09:28 844] isr_1conn  336  netperf =   30  
+[2016/03/09 21:09:28 845] isr_1conn  337  start netperf_other_timer  
+[2016/03/09 21:09:28 893] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:29 195] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:29 245] isr_1conn  315  send_ok_num, timer_num, send_average =   0  3  0  
+[2016/03/09 21:09:29 246] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:29 497] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:29 647] isr_1conn  315  send_ok_num, timer_num, send_average =   0  4  0  
+[2016/03/09 21:09:29 648] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:29 799] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:30 052] isr_1conn  315  send_ok_num, timer_num, send_average =   0  5  0  
+[2016/03/09 21:09:30 053] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:30 101] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:30 402] isr_1conn  288  netperf:  18  
+[2016/03/09 21:09:30 454] isr_1conn  315  send_ok_num, timer_num, send_average =   0  6  0  
+[2016/03/09 21:09:30 454] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:30 703] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:30 855] isr_1conn  315  send_ok_num, timer_num, send_average =   0  7  0  
+[2016/03/09 21:09:30 855] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:31 004] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:31 256] isr_1conn  315  send_ok_num, timer_num, send_average =   0  8  0  
+[2016/03/09 21:09:31 258] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:31 305] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:31 606] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:31 659] isr_1conn  315  send_ok_num, timer_num, send_average =   0  9  0  
+[2016/03/09 21:09:31 660] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:31 909] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:32 062] isr_1conn  315  send_ok_num, timer_num, send_average =   0  10  0  
+[2016/03/09 21:09:32 063] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:32 210] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:32 464] isr_1conn  315  send_ok_num, timer_num, send_average =   0  11  0  
+[2016/03/09 21:09:32 466] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:32 511] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:32 813] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:32 867] isr_1conn  315  send_ok_num, timer_num, send_average =   0  12  0  
+[2016/03/09 21:09:32 868] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:33 115] isr_1conn  288  netperf:  11  
+[2016/03/09 21:09:33 269] isr_1conn  315  send_ok_num, timer_num, send_average =   0  13  0  
+[2016/03/09 21:09:33 269] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:33 416] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:33 670] isr_1conn  315  send_ok_num, timer_num, send_average =   0  14  0  
+[2016/03/09 21:09:33 671] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:33 717] isr_1conn  288  netperf:  13  
+[2016/03/09 21:09:34 018] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:34 072] isr_1conn  315  send_ok_num, timer_num, send_average =   0  15  0  
+[2016/03/09 21:09:34 072] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:34 319] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:34 473] isr_1conn  315  send_ok_num, timer_num, send_average =   0  16  0  
+[2016/03/09 21:09:34 474] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:34 621] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:34 875] isr_1conn  315  send_ok_num, timer_num, send_average =   0  17  0  
+[2016/03/09 21:09:34 876] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:34 922] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:35 224] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:35 276] isr_1conn  315  send_ok_num, timer_num, send_average =   0  18  0  
+[2016/03/09 21:09:35 277] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:35 525] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:35 677] isr_1conn  315  send_ok_num, timer_num, send_average =   0  19  0  
+[2016/03/09 21:09:35 677] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:35 827] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:36 078] isr_1conn  315  send_ok_num, timer_num, send_average =   0  20  0  
+[2016/03/09 21:09:36 078] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:36 129] isr_1conn  288  netperf:  15  
+[2016/03/09 21:09:36 430] isr_1conn  288  netperf:  17  
+[2016/03/09 21:09:36 479] isr_1conn  315  send_ok_num, timer_num, send_average =   0  21  0  
+[2016/03/09 21:09:36 480] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:36 733] isr_1conn  288  netperf:  19  
+[2016/03/09 21:09:36 882] isr_1conn  315  send_ok_num, timer_num, send_average =   0  22  0  
+[2016/03/09 21:09:36 882] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:37 034] isr_1conn  288  netperf:  10  
+[2016/03/09 21:09:37 284] isr_1conn  315  send_ok_num, timer_num, send_average =   0  23  0  
+[2016/03/09 21:09:37 285] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:37 336] isr_1conn  288  netperf:  12  
+[2016/03/09 21:09:37 638] isr_1conn  288  netperf:  14  
+[2016/03/09 21:09:37 686] isr_1conn  315  send_ok_num, timer_num, send_average =   0  24  0  
+[2016/03/09 21:09:37 687] isr_1conn  318  netperf =   30  
+[2016/03/09 21:09:37 940] isr_1conn  288  netperf:  16  
+[2016/03/09 21:09:38 030] isr_1conn  2151 netperf_session_timeout =   20  
+[2016/03/09 21:09:38 031] isr_1conn  2154 MSC:session timeout!  
+[2016/03/09 21:09:38 088] isr_1conn  315  send_ok_num, timer_num, send_average =   0  25  0  
+[2016/03/09 21:09:38 089] isr_1conn  318  netperf =   30  

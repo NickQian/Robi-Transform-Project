@@ -1,0 +1,35 @@
+============================================================
+Time  2016/03/14 19:14:41 429 
+============================================================
+[2016/03/14 19:14:41 429] tts        620  SYS_MSG_REGCB param0 =  msp_status_cb  param1 =  func(74a11538) 
+[2016/03/14 19:14:41 436] config     16   now we use general cloud  
+[2016/03/14 19:14:41 453] tts_cloud  1327 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(74a11538) 
+[2016/03/14 19:14:41 459] tts        593  TTS_MSG_SSB  
+[2016/03/14 19:14:41 461] tts        446  ssb|use cloud  
+[2016/03/14 19:14:41 461] tts_cloud  1298 SYS_MSG_LOAD_CLOUD  
+[2016/03/14 19:14:41 461] tts_cloud  899  TTS_MSG_SSB_CLOUD  
+[2016/03/14 19:14:41 462] tts_cloud  919  tts  ctts1PdHHBHbgK7Jlq7Baa0JTmlEkPxmYl  268436457  1428405388  
+[2016/03/14 19:14:41 463] tts_cloud  965  not login!  
+[2016/03/14 19:14:41 466] tts_cloud  1092 TTS_MSG_SSB | aue=  speex-wb;7   auf=  audio/L16;rate=16000  
+[2016/03/14 19:14:41 467] tts_cloud  1102 User set url is   nil  
+[2016/03/14 19:14:41 468] transport  596  paramkvsport is   nil  
+[2016/03/14 19:14:41 468] transport  801  net type:  standard  
+[2016/03/14 19:14:41 469] transport  802  net operator:  def  
+[2016/03/14 19:14:41 470] transport  803  use proxy:  false  
+[2016/03/14 19:14:41 477] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 19:14:41 477] transport  1033 ns_i =  nil  
+[2016/03/14 19:14:41 481] transport  289  [dns] [0] failed! 10214  
+[2016/03/14 19:14:41 485] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 19:14:41 489] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/14 19:14:41 489] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/14 19:14:41 506] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/14 19:14:41 507] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/14 19:14:41 507] transport  315  soc_conn_failed  
+[2016/03/14 19:14:41 508] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 19:14:41 512] transport  384  switch 80  
+[2016/03/14 19:14:41 514] transport  1139 [soc] disconnect   
+[2016/03/14 19:14:41 517] tts        604  TTS_MSG_SSE  
+[2016/03/14 19:14:41 517] tts        578  sse|use cloud  
+[2016/03/14 19:14:41 518] tts_cloud  1220 TTS_MSG_SSE_CLOUD  
+[2016/03/14 19:14:41 518] tts_cloud  791  tts session info  
+[2016/03/14 19:14:41 530] tts        611  SYS_MSG_UNLOAD  

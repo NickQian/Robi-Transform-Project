@@ -1,0 +1,34 @@
+============================================================
+Time  2016/03/14 18:35:23 190 
+============================================================
+[2016/03/14 18:35:23 191] isr_1conn  2088 SYS_MSG_LOAD_CLOUD  
+[2016/03/14 18:35:23 192] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(74b7dee0) 
+[2016/03/14 18:35:23 193] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_rslt_cb  param1 =  func(74b7ebc0) 
+[2016/03/14 18:35:23 194] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_err_cb  param1 =  func(74b7ecf0) 
+[2016/03/14 18:35:23 195] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_status_cb  param1 =  func(74b7edb0) 
+[2016/03/14 18:35:23 196] isr_1conn  1382 onesoc  
+[2016/03/14 18:35:23 196] isr_1conn  1383 ASR_CLOUD_MSG_SSB  
+[2016/03/14 18:35:23 197] isr_1conn  1398 isr_1conn  cloud_cisr1PdHHBHbgK5FOZlOaaHlrk9bPagdnp  268436457  1428405382  
+[2016/03/14 18:35:23 199] isr_1conn  1466 not login!  
+[2016/03/14 18:35:23 199] isr_1conn  1578 nil  
+[2016/03/14 18:35:23 200] isr_1conn  1647 speex-wb  
+[2016/03/14 18:35:23 200] isr_1conn  1713 once bytes  122  
+[2016/03/14 18:35:23 203] isr_1conn  1734 User set url is   nil  
+[2016/03/14 18:35:23 203] transport  596  paramkvsport is   nil  
+[2016/03/14 18:35:23 204] transport  801  net type:  standard  
+[2016/03/14 18:35:23 204] transport  802  net operator:  def  
+[2016/03/14 18:35:23 204] transport  803  use proxy:  false  
+[2016/03/14 18:35:23 209] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 18:35:23 209] transport  1033 ns_i =  nil  
+[2016/03/14 18:35:28 211] transport  302  [dns] [0] timeout!   
+[2016/03/14 18:35:28 216] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 18:35:28 221] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/14 18:35:28 221] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/14 18:35:33 134] isr_1conn  2151 netperf_session_timeout =   20  
+[2016/03/14 18:35:33 134] isr_1conn  2154 MSC:session timeout!  
+[2016/03/14 18:35:33 141] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/14 18:35:33 141] transport  868  iplist not avail  
+[2016/03/14 18:35:33 142] transport  1139 [soc] disconnect   
+[2016/03/14 18:35:33 291] isr_1conn  1915 ASR_CLOUD_MSG_SSE  
+[2016/03/14 18:35:33 299] isr_1conn  1250 isr_1conn session info  
+[2016/03/14 18:35:33 309] isr_1conn  2061 slave session finished! ret =   10114  

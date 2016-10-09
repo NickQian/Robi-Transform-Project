@@ -1,0 +1,26 @@
+============================================================
+Time  2016/03/15 16:06:00 753 
+============================================================
+[2016/03/15 16:06:00 754] tts        620  SYS_MSG_REGCB param0 =  msp_status_cb  param1 =  func(7487e860) 
+[2016/03/15 16:06:00 760] config     16   now we use general cloud  
+[2016/03/15 16:06:00 793] tts_cloud  1327 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(7487e860) 
+[2016/03/15 16:06:00 795] tts        593  TTS_MSG_SSB  
+[2016/03/15 16:06:00 796] tts        446  ssb|use cloud  
+[2016/03/15 16:06:00 796] tts_cloud  1298 SYS_MSG_LOAD_CLOUD  
+[2016/03/15 16:06:00 797] tts_cloud  899  TTS_MSG_SSB_CLOUD  
+[2016/03/15 16:06:00 797] tts_cloud  919  tts  ctts1P1HHBHbgGWYHk0pCaaW3-wNZHB816X  268436457  1428405388  
+[2016/03/15 16:06:00 799] tts_cloud  965  not login!  
+[2016/03/15 16:06:00 804] tts_cloud  1092 TTS_MSG_SSB | aue=  speex-wb;7   auf=  audio/L16;rate=16000  
+[2016/03/15 16:06:00 804] tts_cloud  1102 User set url is   nil  
+[2016/03/15 16:06:00 805] transport  596  paramkvsport is   nil  
+[2016/03/15 16:06:00 805] transport  801  net type:  standard  
+[2016/03/15 16:06:00 805] transport  802  net operator:  def  
+[2016/03/15 16:06:00 806] transport  803  use proxy:  false  
+[2016/03/15 16:06:00 812] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  116.213.69.200  
+[2016/03/15 16:06:00 812] transport  998  using cached ip:  116.213.69.200  
+[2016/03/15 16:06:00 812] transport  1033 ns_i =  nil  
+[2016/03/15 16:06:00 813] transport  1108 [soc] connect   116.213.69.200  80  
+[2016/03/15 16:06:00 825] tts        604  TTS_MSG_SSE  
+[2016/03/15 16:06:00 826] tts        578  sse|use cloud  
+[2016/03/15 16:06:00 826] tts_cloud  1220 TTS_MSG_SSE_CLOUD  
+[2016/03/15 16:06:00 826] tts_cloud  791  tts session info  

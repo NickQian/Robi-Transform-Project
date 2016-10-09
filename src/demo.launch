@@ -1,0 +1,13 @@
+<launch>
+  <node name = "xx_cam" pkg="xx_cam" type="xx_cam_node" output="screen">
+    <param name="video_device" value="/dev/video0"/>
+    <param name="image_width" value="640"/>
+    <param name="image_height" value="480"/>
+    <param name="pixel_format" value="xx_cam"/>
+    <param name="io_method" value="mmap"/>
+  </node?
+  <node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
+    <remap from="image" to="/xx_came/image/raw"/>
+    <param name="autosize" value="true" />
+  </node>
+</launch>

@@ -1,0 +1,90 @@
+============================================================
+Time  2016/03/10 16:16:42 061 
+============================================================
+[2016/03/10 16:16:42 062] isr_1conn  2088 SYS_MSG_LOAD_CLOUD  
+[2016/03/10 16:16:42 063] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(1337478) 
+[2016/03/10 16:16:42 064] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_rslt_cb  param1 =  func(13381c0) 
+[2016/03/10 16:16:42 065] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_err_cb  param1 =  func(13382d0) 
+[2016/03/10 16:16:42 065] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_status_cb  param1 =  func(1338398) 
+[2016/03/10 16:16:42 066] isr_1conn  1382 onesoc  
+[2016/03/10 16:16:42 067] isr_1conn  1383 ASR_CLOUD_MSG_SSB  
+[2016/03/10 16:16:42 068] isr_1conn  1398 isr_1conn  cloud_cisr1P1HHBHbLPSgHughFaaWTaw-id1FuJ6  268436457  1428405382  
+[2016/03/10 16:16:42 073] isr_1conn  1466 not login!  
+[2016/03/10 16:16:42 073] isr_1conn  1578 nil  
+[2016/03/10 16:16:42 073] isr_1conn  1647 speex-wb  
+[2016/03/10 16:16:42 074] isr_1conn  1713 once bytes  122  
+[2016/03/10 16:16:42 076] isr_1conn  1734 User set url is   nil  
+[2016/03/10 16:16:42 076] transport  596  paramkvsport is   nil  
+[2016/03/10 16:16:42 077] transport  801  net type:  standard  
+[2016/03/10 16:16:42 077] transport  802  net operator:  def  
+[2016/03/10 16:16:42 077] transport  803  use proxy:  false  
+[2016/03/10 16:16:42 084] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/10 16:16:42 084] transport  1033 ns_i =  nil  
+[2016/03/10 16:16:42 086] isr_1conn  1882 ASR_CLOUD_MSG_AUW  11834  5  
+[2016/03/10 16:16:42 086] isr_1conn  1901 starttimer status_cb_timeout, timeout is:  3000  
+[2016/03/10 16:16:45 087] isr_1conn  236  The called number of status_cb_timeout:  1  
+[2016/03/10 16:16:47 085] transport  302  [dns] [0] timeout!   
+[2016/03/10 16:16:47 090] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/10 16:16:47 094] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/10 16:16:47 096] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/10 16:16:48 087] isr_1conn  236  The called number of status_cb_timeout:  2  
+[2016/03/10 16:16:51 088] isr_1conn  236  The called number of status_cb_timeout:  3  
+[2016/03/10 16:16:52 002] isr_1conn  2151 netperf_session_timeout =   20  
+[2016/03/10 16:16:52 003] isr_1conn  2154 MSC:session timeout!  
+[2016/03/10 16:16:52 007] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/10 16:16:52 008] transport  868  iplist not avail  
+[2016/03/10 16:16:52 009] transport  1139 [soc] disconnect   
+[2016/03/10 16:16:54 089] isr_1conn  236  The called number of status_cb_timeout:  4  
+[2016/03/10 16:16:57 090] isr_1conn  236  The called number of status_cb_timeout:  5  
+[2016/03/10 16:17:00 091] isr_1conn  236  The called number of status_cb_timeout:  6  
+[2016/03/10 16:17:03 092] isr_1conn  236  The called number of status_cb_timeout:  7  
+[2016/03/10 16:17:06 093] isr_1conn  236  The called number of status_cb_timeout:  8  
+[2016/03/10 16:17:09 095] isr_1conn  236  The called number of status_cb_timeout:  9  
+[2016/03/10 16:17:12 097] isr_1conn  236  The called number of status_cb_timeout:  10  
+[2016/03/10 16:17:15 098] isr_1conn  236  The called number of status_cb_timeout:  11  
+[2016/03/10 16:17:18 100] isr_1conn  236  The called number of status_cb_timeout:  12  
+[2016/03/10 16:17:21 100] isr_1conn  236  The called number of status_cb_timeout:  13  
+[2016/03/10 16:17:24 101] isr_1conn  236  The called number of status_cb_timeout:  14  
+[2016/03/10 16:17:27 102] isr_1conn  236  The called number of status_cb_timeout:  15  
+[2016/03/10 16:17:30 103] isr_1conn  236  The called number of status_cb_timeout:  16  
+[2016/03/10 16:17:33 104] isr_1conn  236  The called number of status_cb_timeout:  17  
+[2016/03/10 16:17:36 105] isr_1conn  236  The called number of status_cb_timeout:  18  
+[2016/03/10 16:17:39 106] isr_1conn  236  The called number of status_cb_timeout:  19  
+[2016/03/10 16:17:42 108] isr_1conn  236  The called number of status_cb_timeout:  20  
+[2016/03/10 16:17:45 109] isr_1conn  236  The called number of status_cb_timeout:  21  
+[2016/03/10 16:17:48 110] isr_1conn  236  The called number of status_cb_timeout:  22  
+[2016/03/10 16:17:51 111] isr_1conn  236  The called number of status_cb_timeout:  23  
+[2016/03/10 16:17:54 112] isr_1conn  236  The called number of status_cb_timeout:  24  
+[2016/03/10 16:17:57 113] isr_1conn  236  The called number of status_cb_timeout:  25  
+[2016/03/10 16:18:00 114] isr_1conn  236  The called number of status_cb_timeout:  26  
+[2016/03/10 16:18:03 116] isr_1conn  236  The called number of status_cb_timeout:  27  
+[2016/03/10 16:18:06 117] isr_1conn  236  The called number of status_cb_timeout:  28  
+[2016/03/10 16:18:09 118] isr_1conn  236  The called number of status_cb_timeout:  29  
+[2016/03/10 16:18:12 119] isr_1conn  236  The called number of status_cb_timeout:  30  
+[2016/03/10 16:18:15 121] isr_1conn  236  The called number of status_cb_timeout:  31  
+[2016/03/10 16:18:18 122] isr_1conn  236  The called number of status_cb_timeout:  32  
+[2016/03/10 16:18:21 123] isr_1conn  236  The called number of status_cb_timeout:  33  
+[2016/03/10 16:18:24 124] isr_1conn  236  The called number of status_cb_timeout:  34  
+[2016/03/10 16:18:27 125] isr_1conn  236  The called number of status_cb_timeout:  35  
+[2016/03/10 16:18:30 127] isr_1conn  236  The called number of status_cb_timeout:  36  
+[2016/03/10 16:18:33 128] isr_1conn  236  The called number of status_cb_timeout:  37  
+[2016/03/10 16:18:36 129] isr_1conn  236  The called number of status_cb_timeout:  38  
+[2016/03/10 16:18:39 131] isr_1conn  236  The called number of status_cb_timeout:  39  
+[2016/03/10 16:18:42 133] isr_1conn  236  The called number of status_cb_timeout:  40  
+[2016/03/10 16:18:45 134] isr_1conn  236  The called number of status_cb_timeout:  41  
+[2016/03/10 16:18:48 136] isr_1conn  236  The called number of status_cb_timeout:  42  
+[2016/03/10 16:18:51 141] isr_1conn  236  The called number of status_cb_timeout:  43  
+[2016/03/10 16:18:54 142] isr_1conn  236  The called number of status_cb_timeout:  44  
+[2016/03/10 16:18:57 143] isr_1conn  236  The called number of status_cb_timeout:  45  
+[2016/03/10 16:19:00 145] isr_1conn  236  The called number of status_cb_timeout:  46  
+[2016/03/10 16:19:03 146] isr_1conn  236  The called number of status_cb_timeout:  47  
+[2016/03/10 16:19:06 147] isr_1conn  236  The called number of status_cb_timeout:  48  
+[2016/03/10 16:19:09 149] isr_1conn  236  The called number of status_cb_timeout:  49  
+[2016/03/10 16:19:12 150] isr_1conn  236  The called number of status_cb_timeout:  50  
+[2016/03/10 16:19:15 150] isr_1conn  236  The called number of status_cb_timeout:  51  
+[2016/03/10 16:19:18 151] isr_1conn  236  The called number of status_cb_timeout:  52  
+[2016/03/10 16:19:21 152] isr_1conn  236  The called number of status_cb_timeout:  53  
+[2016/03/10 16:19:24 153] isr_1conn  236  The called number of status_cb_timeout:  54  
+[2016/03/10 16:19:27 155] isr_1conn  236  The called number of status_cb_timeout:  55  
+[2016/03/10 16:19:30 155] isr_1conn  236  The called number of status_cb_timeout:  56  
+[2016/03/10 16:19:33 156] isr_1conn  236  The called number of status_cb_timeout:  57  

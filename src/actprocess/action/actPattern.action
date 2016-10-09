@@ -1,0 +1,56 @@
+#GoalID goal_id        #/opt/ros/indigo/share/actionlib_msgs/GoalID.msg  (time stamp, string id)
+
+# goal  ( L arm / R arm / H head / L leg / R leg  )
+
+uint8  op                  # 1: pattern operation   2: elaborate operation  3: moiveit operation
+uint8  pattern             # 0: null, 1: visual track, 2: talk gestures, 3:emotion lan  4: leg move, 5.combination 6.follow item
+bool   visual_track_switch # switch
+box    roi
+uint8  talk_gesture        # 0: null, 1:boring, 2:hello, 3:bye, 4:yes_1, 5:no_1
+uint8  emotion_type        #
+
+#for elaborate operation: 
+string bodyID              # arm_L/forearm_L/arm_R/forearm_R/shoulder_L/shoulder_R/elbow_L/elbow_R/knee_L/knee_R/head_H/leg_L/leg_R
+int8   amp                 # amplitude, 1-10
+int8   move_speed          # 1-10    
+
+uint8  PATTERN_OPERATION    = 1
+uint8  ELABORATE_OPERATION  = 2
+uint8  MOVEIT_OPERATION     = 3
+uint8  VISUAL_TRACK         = 1
+uint8  TALK_GESTURE         = 2
+uint8  EMOTION_LANG         = 3
+uint8  LEG_MOVE             = 4
+uint8  COMBINATION_PTN      = 5
+uint8  TG_BORING            = 1
+uint8  TG_HELLO             = 2
+uint8  TG_BYE               = 3
+uint8  EMO_XI_LU_AI_LE_AI_WU_JU = 4
+
+
+---
+
+#result
+uint8  result          # done/ing/blocked
+
+uint8  PENDING    = 0  # the goal has not yet to be processed by server
+uint8  ACTIVE     = 1  # the goal us processing
+uint8  PREEMPTED  = 2  # the goal received a cancel request <after> start executing
+uint8  SUCCEEDED  = 3  # goal achieved
+uint8  ABORTED    = 4  # by server dur to failure
+uint8  REJECTED   = 5  # by server because goal was unattainable or invalid
+uint8  PREEMPTING = 6  # the goal received a cancel request after start executing(adn has not yet complete exe)
+uint8  RECALLING  = 7  # the goal received a cancel request <before> start executing ...
+uint8  RECALLED   = 8  # 
+uint8  LOST       = 9  # cliet determine that a goal is LOST
+
+---
+
+#feedback
+int32 crt_process
+
+
+
+
+
+

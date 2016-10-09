@@ -1,0 +1,497 @@
+============================================================
+Time  2016/03/09 18:38:02 929 
+============================================================
+[2016/03/09 18:38:02 930] isr_1conn  2088 SYS_MSG_LOAD_CLOUD  
+[2016/03/09 18:38:02 931] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(73a9e9a0) 
+[2016/03/09 18:38:02 932] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_rslt_cb  param1 =  func(73a9f678) 
+[2016/03/09 18:38:02 932] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_err_cb  param1 =  func(73a9f7a8) 
+[2016/03/09 18:38:02 933] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_status_cb  param1 =  func(73a9f868) 
+[2016/03/09 18:38:02 934] isr_1conn  1382 onesoc  
+[2016/03/09 18:38:02 934] isr_1conn  1383 ASR_CLOUD_MSG_SSB  
+[2016/03/09 18:38:02 935] isr_1conn  1398 isr_1conn  cloud_cisr1PwHHBHb8670pAOaaP34PJUHOMHfQ  268436457  1428405382  
+[2016/03/09 18:38:02 936] isr_1conn  1466 not login!  
+[2016/03/09 18:38:02 936] isr_1conn  1578 nil  
+[2016/03/09 18:38:02 936] isr_1conn  1647 speex-wb  
+[2016/03/09 18:38:02 936] isr_1conn  1713 once bytes  122  
+[2016/03/09 18:38:02 938] isr_1conn  1734 User set url is   nil  
+[2016/03/09 18:38:02 938] transport  596  paramkvsport is   nil  
+[2016/03/09 18:38:02 938] transport  801  net type:  standard  
+[2016/03/09 18:38:02 939] transport  802  net operator:  def  
+[2016/03/09 18:38:02 939] transport  803  use proxy:  false  
+[2016/03/09 18:38:02 944] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:02 944] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:02 947] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:02 950] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:02 953] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:02 954] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:02 957] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:02 957] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:02 957] transport  315  soc_conn_failed  
+[2016/03/09 18:38:02 957] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:02 961] transport  384  switch 80  
+[2016/03/09 18:38:02 962] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:03 118] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  1  
+[2016/03/09 18:38:03 167] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 167] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:03 169] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:03 173] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 176] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 177] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:03 179] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:03 180] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:03 180] transport  315  soc_conn_failed  
+[2016/03/09 18:38:03 180] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 184] transport  384  switch 80  
+[2016/03/09 18:38:03 185] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:03 245] isr_1conn  288  netperf:  93  
+[2016/03/09 18:38:03 340] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:03 390] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 391] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:03 394] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:03 400] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 404] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 405] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:03 409] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:03 409] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:03 410] transport  315  soc_conn_failed  
+[2016/03/09 18:38:03 410] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 416] transport  384  switch 80  
+[2016/03/09 18:38:03 417] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:03 527] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:03 547] isr_1conn  288  netperf:  84  
+[2016/03/09 18:38:03 621] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 622] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:03 624] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:03 628] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 631] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 632] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:03 634] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:03 635] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:03 635] transport  315  soc_conn_failed  
+[2016/03/09 18:38:03 635] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 639] transport  384  switch 80  
+[2016/03/09 18:38:03 640] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:03 721] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:03 844] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 845] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:03 847] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:03 851] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 855] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 855] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:03 857] isr_1conn  288  netperf:  75  
+[2016/03/09 18:38:03 858] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:03 859] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:03 859] transport  315  soc_conn_failed  
+[2016/03/09 18:38:03 859] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:03 863] transport  384  switch 80  
+[2016/03/09 18:38:03 864] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:03 922] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:04 068] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 069] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:04 071] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:04 075] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 078] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 079] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:04 081] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:04 082] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:04 082] transport  315  soc_conn_failed  
+[2016/03/09 18:38:04 082] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 086] transport  384  switch 80  
+[2016/03/09 18:38:04 087] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:04 123] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:04 157] isr_1conn  288  netperf:  65  
+[2016/03/09 18:38:04 291] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 291] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:04 294] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:04 298] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 301] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 302] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:04 304] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:04 305] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:04 305] transport  315  soc_conn_failed  
+[2016/03/09 18:38:04 305] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 309] transport  384  switch 80  
+[2016/03/09 18:38:04 310] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:04 326] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:04 463] isr_1conn  288  netperf:  50  
+[2016/03/09 18:38:04 514] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 515] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:04 532] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:04 537] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 540] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 540] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:04 543] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:04 544] isr_1conn  1758 ASR_CLOUD_MSG_AUW  6400  2  
+[2016/03/09 18:38:04 545] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:04 546] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:04 546] transport  315  soc_conn_failed  
+[2016/03/09 18:38:04 546] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 550] transport  384  switch 80  
+[2016/03/09 18:38:04 555] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:04 719] isr_1conn  1758 ASR_CLOUD_MSG_AUW  3520  4  
+[2016/03/09 18:38:04 720] isr_1conn  1779 starttimer status_cb_timeout, timeout is:  3000  
+[2016/03/09 18:38:04 720] isr_1conn  1788 audio len:  61120  
+[2016/03/09 18:38:04 760] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 760] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:04 763] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:04 767] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 771] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 772] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:04 774] isr_1conn  288  netperf:  41  
+[2016/03/09 18:38:04 775] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:04 776] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:04 776] transport  315  soc_conn_failed  
+[2016/03/09 18:38:04 776] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 780] transport  384  switch 80  
+[2016/03/09 18:38:04 785] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:04 990] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:04 990] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:04 993] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:04 997] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 000] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 001] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:05 003] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:05 004] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:05 004] transport  315  soc_conn_failed  
+[2016/03/09 18:38:05 004] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 008] transport  384  switch 80  
+[2016/03/09 18:38:05 013] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:05 075] isr_1conn  288  netperf:  32  
+[2016/03/09 18:38:05 217] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 217] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:05 220] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:05 224] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 227] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 228] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:05 230] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:05 231] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:05 231] transport  315  soc_conn_failed  
+[2016/03/09 18:38:05 231] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 235] transport  384  switch 80  
+[2016/03/09 18:38:05 240] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:05 376] isr_1conn  288  netperf:  24  
+[2016/03/09 18:38:05 443] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 444] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:05 447] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:05 450] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 454] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 455] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:05 457] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:05 457] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:05 458] transport  315  soc_conn_failed  
+[2016/03/09 18:38:05 458] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 462] transport  384  switch 80  
+[2016/03/09 18:38:05 466] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:05 671] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 672] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:05 685] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:05 689] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 695] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 696] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:05 698] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:05 699] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:05 700] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:05 700] transport  315  soc_conn_failed  
+[2016/03/09 18:38:05 700] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 705] transport  384  switch 80  
+[2016/03/09 18:38:05 709] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:05 913] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 914] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:05 916] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:05 920] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 923] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 924] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:05 927] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:05 927] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:05 927] transport  315  soc_conn_failed  
+[2016/03/09 18:38:05 927] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:05 933] transport  384  switch 80  
+[2016/03/09 18:38:05 934] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:05 999] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:06 139] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 139] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:06 142] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:06 146] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 149] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 150] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:06 153] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:06 153] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:06 154] transport  315  soc_conn_failed  
+[2016/03/09 18:38:06 154] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 158] transport  384  switch 80  
+[2016/03/09 18:38:06 158] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:06 301] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:06 363] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 363] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:06 366] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:06 369] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 373] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 374] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:06 376] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:06 376] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:06 377] transport  315  soc_conn_failed  
+[2016/03/09 18:38:06 377] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 381] transport  384  switch 80  
+[2016/03/09 18:38:06 381] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:06 587] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 588] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:06 592] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:06 596] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 599] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 600] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:06 602] isr_1conn  288  netperf:  19  
+[2016/03/09 18:38:06 603] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:06 604] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:06 604] transport  315  soc_conn_failed  
+[2016/03/09 18:38:06 604] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 608] transport  384  switch 80  
+[2016/03/09 18:38:06 609] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:06 814] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 814] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:06 817] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:06 821] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 824] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 825] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:06 827] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:06 828] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:06 828] transport  315  soc_conn_failed  
+[2016/03/09 18:38:06 828] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:06 832] transport  384  switch 80  
+[2016/03/09 18:38:06 833] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:06 903] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:07 038] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 039] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:07 044] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:07 048] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 052] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 053] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:07 055] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:07 056] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:07 056] transport  315  soc_conn_failed  
+[2016/03/09 18:38:07 056] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 060] transport  384  switch 80  
+[2016/03/09 18:38:07 061] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:07 205] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:07 265] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 265] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:07 268] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:07 272] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 275] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 276] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:07 278] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:07 279] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:07 279] transport  315  soc_conn_failed  
+[2016/03/09 18:38:07 279] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 283] transport  384  switch 80  
+[2016/03/09 18:38:07 284] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:07 489] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 489] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:07 492] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:07 497] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 502] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 504] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:07 506] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:07 507] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:07 507] transport  315  soc_conn_failed  
+[2016/03/09 18:38:07 507] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 511] transport  384  switch 80  
+[2016/03/09 18:38:07 512] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:07 513] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:07 716] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 717] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:07 719] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:07 723] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 726] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 728] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:07 729] isr_1conn  236  The called number of status_cb_timeout:  1  
+[2016/03/09 18:38:07 731] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:07 731] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:07 731] transport  315  soc_conn_failed  
+[2016/03/09 18:38:07 732] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 736] transport  384  switch 80  
+[2016/03/09 18:38:07 736] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:07 815] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:07 941] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 942] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:07 945] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:07 949] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 954] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 956] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:07 960] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:07 961] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:07 961] transport  315  soc_conn_failed  
+[2016/03/09 18:38:07 961] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:07 966] transport  384  switch 80  
+[2016/03/09 18:38:07 966] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 117] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:08 171] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 171] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:08 174] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:08 177] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 181] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 181] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:08 184] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 184] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:08 185] transport  315  soc_conn_failed  
+[2016/03/09 18:38:08 185] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 189] transport  384  switch 80  
+[2016/03/09 18:38:08 189] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 407] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 407] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:08 410] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:08 415] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 421] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 422] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:08 424] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:08 425] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 426] transport  542  socket_notify_handler, try2conn_times =  1  
+[2016/03/09 18:38:08 426] transport  315  soc_conn_failed  
+[2016/03/09 18:38:08 426] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 430] transport  384  switch 80  
+[2016/03/09 18:38:08 431] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 432] transport  49   throw_exception  10202  101  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 432] isr_1conn  727  transport exception  10202  
+[2016/03/09 18:38:08 434] isr_1conn  754  start a new session  
+[2016/03/09 18:38:08 438] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 438] transport  868  iplist not avail  
+[2016/03/09 18:38:08 439] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 447] isr_1conn  1154 no_audio is true  
+[2016/03/09 18:38:08 448] isr_1conn  1182 [session] send 1th audio  
+[2016/03/09 18:38:08 448] isr_1conn  1184 totalsz =   5795  
+[2016/03/09 18:38:08 449] isr_1conn  1187 start netperf_fs_timer  
+[2016/03/09 18:38:08 450] isr_1conn  1208 [session] send last audio!  
+[2016/03/09 18:38:08 725] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:09 027] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:09 249] isr_1conn  333  send_ok_num, timer_num, send_average =   0  2  0  
+[2016/03/09 18:38:09 250] isr_1conn  336  netperf =   30  
+[2016/03/09 18:38:09 250] isr_1conn  337  start netperf_other_timer  
+[2016/03/09 18:38:09 328] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:09 634] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:09 651] isr_1conn  315  send_ok_num, timer_num, send_average =   0  3  0  
+[2016/03/09 18:38:09 654] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:09 936] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:10 055] isr_1conn  315  send_ok_num, timer_num, send_average =   0  4  0  
+[2016/03/09 18:38:10 056] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:10 237] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:10 457] isr_1conn  315  send_ok_num, timer_num, send_average =   0  5  0  
+[2016/03/09 18:38:10 458] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:10 539] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:10 840] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:10 858] isr_1conn  315  send_ok_num, timer_num, send_average =   0  6  0  
+[2016/03/09 18:38:10 859] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:11 142] isr_1conn  288  netperf:  19  
+[2016/03/09 18:38:11 265] isr_1conn  315  send_ok_num, timer_num, send_average =   0  7  0  
+[2016/03/09 18:38:11 267] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:11 445] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:11 667] isr_1conn  315  send_ok_num, timer_num, send_average =   0  8  0  
+[2016/03/09 18:38:11 668] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:11 746] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:12 048] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:12 069] isr_1conn  315  send_ok_num, timer_num, send_average =   0  9  0  
+[2016/03/09 18:38:12 070] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:12 350] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:12 471] isr_1conn  315  send_ok_num, timer_num, send_average =   0  10  0  
+[2016/03/09 18:38:12 472] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:12 653] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:12 872] isr_1conn  315  send_ok_num, timer_num, send_average =   0  11  0  
+[2016/03/09 18:38:12 873] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:12 954] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:13 259] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:13 277] isr_1conn  315  send_ok_num, timer_num, send_average =   0  12  0  
+[2016/03/09 18:38:13 278] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:13 567] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:13 679] isr_1conn  315  send_ok_num, timer_num, send_average =   0  13  0  
+[2016/03/09 18:38:13 680] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:13 869] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:14 080] isr_1conn  315  send_ok_num, timer_num, send_average =   0  14  0  
+[2016/03/09 18:38:14 081] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:14 171] isr_1conn  288  netperf:  19  
+[2016/03/09 18:38:14 473] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:14 482] isr_1conn  315  send_ok_num, timer_num, send_average =   0  15  0  
+[2016/03/09 18:38:14 484] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:14 776] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:14 884] isr_1conn  315  send_ok_num, timer_num, send_average =   0  16  0  
+[2016/03/09 18:38:14 884] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:15 077] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:15 285] isr_1conn  315  send_ok_num, timer_num, send_average =   0  17  0  
+[2016/03/09 18:38:15 285] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:15 379] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:15 680] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:15 687] isr_1conn  315  send_ok_num, timer_num, send_average =   0  18  0  
+[2016/03/09 18:38:15 687] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:15 981] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:16 089] isr_1conn  315  send_ok_num, timer_num, send_average =   0  19  0  
+[2016/03/09 18:38:16 089] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:16 282] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:16 491] isr_1conn  315  send_ok_num, timer_num, send_average =   0  20  0  
+[2016/03/09 18:38:16 491] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:16 583] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:16 884] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:16 892] isr_1conn  315  send_ok_num, timer_num, send_average =   0  21  0  
+[2016/03/09 18:38:16 893] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:17 184] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:17 293] isr_1conn  315  send_ok_num, timer_num, send_average =   0  22  0  
+[2016/03/09 18:38:17 294] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:17 486] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:17 695] isr_1conn  315  send_ok_num, timer_num, send_average =   0  23  0  
+[2016/03/09 18:38:17 696] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:17 787] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:18 088] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:18 097] isr_1conn  315  send_ok_num, timer_num, send_average =   0  24  0  
+[2016/03/09 18:38:18 097] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:18 389] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:18 498] isr_1conn  315  send_ok_num, timer_num, send_average =   0  25  0  
+[2016/03/09 18:38:18 499] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:18 691] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:18 901] isr_1conn  315  send_ok_num, timer_num, send_average =   0  26  0  
+[2016/03/09 18:38:18 901] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:18 992] isr_1conn  288  netperf:  19  
+[2016/03/09 18:38:19 298] isr_1conn  288  netperf:  15  
+[2016/03/09 18:38:19 307] isr_1conn  315  send_ok_num, timer_num, send_average =   0  27  0  
+[2016/03/09 18:38:19 309] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:19 599] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:19 710] isr_1conn  315  send_ok_num, timer_num, send_average =   0  28  0  
+[2016/03/09 18:38:19 711] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:19 900] isr_1conn  288  netperf:  17  
+[2016/03/09 18:38:20 113] isr_1conn  315  send_ok_num, timer_num, send_average =   0  29  0  
+[2016/03/09 18:38:20 114] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:20 202] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:20 504] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:20 514] isr_1conn  315  send_ok_num, timer_num, send_average =   0  30  0  
+[2016/03/09 18:38:20 515] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:20 807] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:20 916] isr_1conn  315  send_ok_num, timer_num, send_average =   0  31  0  
+[2016/03/09 18:38:20 917] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:21 109] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:21 321] isr_1conn  315  send_ok_num, timer_num, send_average =   0  32  0  
+[2016/03/09 18:38:21 322] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:21 410] isr_1conn  288  netperf:  18  
+[2016/03/09 18:38:21 712] isr_1conn  288  netperf:  19  
+[2016/03/09 18:38:21 723] isr_1conn  315  send_ok_num, timer_num, send_average =   0  33  0  
+[2016/03/09 18:38:21 723] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:22 013] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:22 124] isr_1conn  315  send_ok_num, timer_num, send_average =   0  34  0  
+[2016/03/09 18:38:22 124] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:22 314] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:22 525] isr_1conn  315  send_ok_num, timer_num, send_average =   0  35  0  
+[2016/03/09 18:38:22 526] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:22 616] isr_1conn  288  netperf:  13  
+[2016/03/09 18:38:22 917] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:22 927] isr_1conn  315  send_ok_num, timer_num, send_average =   0  36  0  
+[2016/03/09 18:38:22 927] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:23 218] isr_1conn  288  netperf:  16  
+[2016/03/09 18:38:23 332] isr_1conn  315  send_ok_num, timer_num, send_average =   0  37  0  
+[2016/03/09 18:38:23 333] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:23 523] isr_1conn  288  netperf:  10  
+[2016/03/09 18:38:23 734] isr_1conn  315  send_ok_num, timer_num, send_average =   0  38  0  
+[2016/03/09 18:38:23 735] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:23 824] isr_1conn  288  netperf:  11  
+[2016/03/09 18:38:24 125] isr_1conn  288  netperf:  12  
+[2016/03/09 18:38:24 136] isr_1conn  315  send_ok_num, timer_num, send_average =   0  39  0  
+[2016/03/09 18:38:24 136] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:24 426] isr_1conn  288  netperf:  14  
+[2016/03/09 18:38:24 537] isr_1conn  315  send_ok_num, timer_num, send_average =   0  40  0  
+[2016/03/09 18:38:24 538] isr_1conn  318  netperf =   30  
+[2016/03/09 18:38:24 721] isr_1conn  2151 netperf_session_timeout =   20  
+[2016/03/09 18:38:24 721] isr_1conn  2154 MSC:session timeout!  
+[2016/03/09 18:38:24 727] isr_1conn  288  netperf:  15  

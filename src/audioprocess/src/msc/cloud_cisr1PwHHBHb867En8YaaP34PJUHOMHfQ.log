@@ -1,0 +1,935 @@
+============================================================
+Time  2016/03/09 18:38:08 483 
+============================================================
+[2016/03/09 18:38:08 483] isr_1conn  2088 SYS_MSG_LOAD_CLOUD  
+[2016/03/09 18:38:08 484] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(74d896b0) 
+[2016/03/09 18:38:08 484] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_rslt_cb  param1 =  func(74d8a388) 
+[2016/03/09 18:38:08 485] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_err_cb  param1 =  func(74d8a4b8) 
+[2016/03/09 18:38:08 486] isr_1conn  2109 SYS_MSG_REGCB_CLOUD param0 =   cloud_status_cb  param1 =  func(74d8a578) 
+[2016/03/09 18:38:08 488] isr_1conn  1382 onesoc  
+[2016/03/09 18:38:08 488] isr_1conn  1383 ASR_CLOUD_MSG_SSB  
+[2016/03/09 18:38:08 488] isr_1conn  1398 isr_1conn  cloud_cisr1PwHHBHb867En8YaaP34PJUHOMHfQ  268436457  1428405382  
+[2016/03/09 18:38:08 489] isr_1conn  1466 not login!  
+[2016/03/09 18:38:08 490] isr_1conn  1578 nil  
+[2016/03/09 18:38:08 490] isr_1conn  1647 speex-wb  
+[2016/03/09 18:38:08 490] isr_1conn  1713 once bytes  122  
+[2016/03/09 18:38:08 492] isr_1conn  1734 User set url is   nil  
+[2016/03/09 18:38:08 492] transport  596  paramkvsport is   nil  
+[2016/03/09 18:38:08 493] transport  801  net type:  standard  
+[2016/03/09 18:38:08 493] transport  802  net operator:  def  
+[2016/03/09 18:38:08 493] transport  803  use proxy:  false  
+[2016/03/09 18:38:08 501] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 501] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:08 504] isr_1conn  1882 ASR_CLOUD_MSG_AUW  5795  5  
+[2016/03/09 18:38:08 505] isr_1conn  1901 starttimer status_cb_timeout, timeout is:  3000  
+[2016/03/09 18:38:08 507] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:08 511] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 516] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 516] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:08 520] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 520] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:08 520] transport  315  soc_conn_failed  
+[2016/03/09 18:38:08 521] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 532] transport  384  switch 80  
+[2016/03/09 18:38:08 533] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 738] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 738] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:08 741] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:08 746] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 749] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 749] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:08 755] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 755] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:08 755] transport  315  soc_conn_failed  
+[2016/03/09 18:38:08 755] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 759] transport  384  switch 80  
+[2016/03/09 18:38:08 760] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:08 964] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 965] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:08 971] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:08 975] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 979] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 979] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:08 986] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:08 986] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:08 987] transport  315  soc_conn_failed  
+[2016/03/09 18:38:08 987] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:08 991] transport  384  switch 80  
+[2016/03/09 18:38:08 992] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:09 197] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 197] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:09 200] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:09 203] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 206] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 207] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:09 209] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:09 210] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:09 210] transport  315  soc_conn_failed  
+[2016/03/09 18:38:09 210] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 214] transport  384  switch 80  
+[2016/03/09 18:38:09 215] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:09 419] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 419] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:09 422] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:09 426] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 429] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 430] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:09 432] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:09 433] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:09 433] transport  315  soc_conn_failed  
+[2016/03/09 18:38:09 433] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 444] transport  384  switch 80  
+[2016/03/09 18:38:09 445] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:09 650] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 650] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:09 653] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:09 657] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 660] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 661] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:09 663] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:09 664] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:09 664] transport  315  soc_conn_failed  
+[2016/03/09 18:38:09 664] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 668] transport  384  switch 80  
+[2016/03/09 18:38:09 669] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:09 873] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 874] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:09 876] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:09 880] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 884] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 884] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:09 887] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:09 887] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:09 887] transport  315  soc_conn_failed  
+[2016/03/09 18:38:09 887] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:09 893] transport  384  switch 80  
+[2016/03/09 18:38:09 894] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:10 098] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 099] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:10 102] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:10 109] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 113] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 114] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:10 119] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:10 120] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:10 120] transport  315  soc_conn_failed  
+[2016/03/09 18:38:10 120] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 124] transport  384  switch 80  
+[2016/03/09 18:38:10 125] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:10 329] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 329] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:10 337] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:10 341] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 345] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 354] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:10 359] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:10 360] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:10 360] transport  315  soc_conn_failed  
+[2016/03/09 18:38:10 360] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 365] transport  384  switch 80  
+[2016/03/09 18:38:10 367] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:10 571] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 571] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:10 574] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:10 579] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 583] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 584] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:10 587] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:10 588] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:10 589] transport  315  soc_conn_failed  
+[2016/03/09 18:38:10 589] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 593] transport  384  switch 80  
+[2016/03/09 18:38:10 594] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:10 798] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 798] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:10 801] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:10 806] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 811] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 813] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:10 817] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:10 818] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:10 818] transport  315  soc_conn_failed  
+[2016/03/09 18:38:10 818] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:10 823] transport  384  switch 80  
+[2016/03/09 18:38:10 824] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:11 029] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 030] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:11 033] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:11 038] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 042] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 042] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:11 046] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:11 047] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:11 047] transport  315  soc_conn_failed  
+[2016/03/09 18:38:11 047] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 051] transport  384  switch 80  
+[2016/03/09 18:38:11 052] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:11 257] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 258] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:11 261] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:11 265] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 268] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 269] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:11 273] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:11 275] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:11 275] transport  315  soc_conn_failed  
+[2016/03/09 18:38:11 275] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 280] transport  384  switch 80  
+[2016/03/09 18:38:11 281] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:11 486] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 486] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:11 490] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:11 495] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 498] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 499] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:11 502] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:11 502] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:11 503] transport  315  soc_conn_failed  
+[2016/03/09 18:38:11 503] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 507] transport  384  switch 80  
+[2016/03/09 18:38:11 507] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:11 508] isr_1conn  236  The called number of status_cb_timeout:  1  
+[2016/03/09 18:38:11 712] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 712] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:11 723] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:11 727] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 730] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 731] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:11 735] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:11 736] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:11 736] transport  315  soc_conn_failed  
+[2016/03/09 18:38:11 737] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 741] transport  384  switch 80  
+[2016/03/09 18:38:11 743] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:11 947] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 948] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:11 950] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:11 954] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 957] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 958] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:11 960] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:11 961] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:11 961] transport  315  soc_conn_failed  
+[2016/03/09 18:38:11 961] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:11 965] transport  384  switch 80  
+[2016/03/09 18:38:11 966] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:12 170] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 171] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:12 174] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:12 178] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 181] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 182] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:12 184] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:12 185] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:12 185] transport  315  soc_conn_failed  
+[2016/03/09 18:38:12 185] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 190] transport  384  switch 80  
+[2016/03/09 18:38:12 191] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:12 399] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 399] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:12 402] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:12 405] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 409] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 410] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:12 412] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:12 413] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:12 413] transport  315  soc_conn_failed  
+[2016/03/09 18:38:12 413] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 417] transport  384  switch 80  
+[2016/03/09 18:38:12 418] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:12 621] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 622] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:12 624] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:12 628] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 633] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 633] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:12 636] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:12 636] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:12 636] transport  315  soc_conn_failed  
+[2016/03/09 18:38:12 637] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 641] transport  384  switch 80  
+[2016/03/09 18:38:12 641] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:12 846] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 846] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:12 848] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:12 852] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 856] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 856] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:12 859] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:12 859] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:12 859] transport  315  soc_conn_failed  
+[2016/03/09 18:38:12 859] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:12 863] transport  384  switch 80  
+[2016/03/09 18:38:12 864] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 069] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 069] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:13 072] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:13 076] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 080] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 080] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:13 083] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:13 083] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:13 084] transport  315  soc_conn_failed  
+[2016/03/09 18:38:13 084] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 088] transport  384  switch 80  
+[2016/03/09 18:38:13 089] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 296] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 296] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:13 301] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:13 305] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 309] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 310] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:13 319] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:13 320] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:13 320] transport  315  soc_conn_failed  
+[2016/03/09 18:38:13 320] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 325] transport  384  switch 80  
+[2016/03/09 18:38:13 326] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 532] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 532] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:13 535] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:13 539] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 545] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 547] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:13 550] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:13 551] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:13 551] transport  315  soc_conn_failed  
+[2016/03/09 18:38:13 551] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 556] transport  384  switch 80  
+[2016/03/09 18:38:13 557] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 762] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 762] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:13 765] transport  289  [dns] [0] failed! 10214  
+[2016/03/09 18:38:13 769] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 772] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 773] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:13 775] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:13 776] transport  542  socket_notify_handler, try2conn_times =  1  
+[2016/03/09 18:38:13 776] transport  315  soc_conn_failed  
+[2016/03/09 18:38:13 776] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 780] transport  384  switch 80  
+[2016/03/09 18:38:13 781] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 781] transport  49   throw_exception  10202  101  MSC:[soc] [0] error 10202 101!  
+[2016/03/09 18:38:13 781] isr_1conn  716  transport exception  10202  slave  
+[2016/03/09 18:38:13 786] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 786] transport  868  iplist not avail  
+[2016/03/09 18:38:13 787] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:13 790] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 791] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:13 819] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:13 823] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 827] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 827] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:13 834] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:13 834] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:13 835] transport  315  soc_conn_failed  
+[2016/03/09 18:38:13 835] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:13 839] transport  384  switch 80  
+[2016/03/09 18:38:13 840] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:14 044] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 044] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:14 047] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:14 051] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 054] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 055] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:14 057] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:14 058] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:14 058] transport  315  soc_conn_failed  
+[2016/03/09 18:38:14 058] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 062] transport  384  switch 80  
+[2016/03/09 18:38:14 063] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:14 267] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 267] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:14 270] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:14 274] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 277] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 279] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:14 281] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:14 281] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:14 281] transport  315  soc_conn_failed  
+[2016/03/09 18:38:14 281] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 285] transport  384  switch 80  
+[2016/03/09 18:38:14 286] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:14 493] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 493] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:14 497] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:14 501] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 505] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 506] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:14 508] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:14 508] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:14 509] transport  315  soc_conn_failed  
+[2016/03/09 18:38:14 509] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 513] transport  384  switch 80  
+[2016/03/09 18:38:14 514] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:14 514] isr_1conn  236  The called number of status_cb_timeout:  2  
+[2016/03/09 18:38:14 718] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 718] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:14 721] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:14 725] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 728] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 729] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:14 732] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:14 732] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:14 733] transport  315  soc_conn_failed  
+[2016/03/09 18:38:14 733] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 736] transport  384  switch 80  
+[2016/03/09 18:38:14 737] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:14 942] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 943] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:14 947] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:14 952] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 956] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 957] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:14 959] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:14 960] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:14 960] transport  315  soc_conn_failed  
+[2016/03/09 18:38:14 960] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:14 964] transport  384  switch 80  
+[2016/03/09 18:38:14 965] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:15 169] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 170] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:15 173] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:15 176] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 180] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 180] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:15 183] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:15 183] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:15 184] transport  315  soc_conn_failed  
+[2016/03/09 18:38:15 184] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 188] transport  384  switch 80  
+[2016/03/09 18:38:15 188] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:15 393] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 394] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:15 398] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:15 403] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 408] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 409] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:15 411] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:15 412] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:15 412] transport  315  soc_conn_failed  
+[2016/03/09 18:38:15 412] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 416] transport  384  switch 80  
+[2016/03/09 18:38:15 417] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:15 622] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 622] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:15 625] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:15 629] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 632] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 633] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:15 635] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:15 636] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:15 636] transport  315  soc_conn_failed  
+[2016/03/09 18:38:15 636] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 640] transport  384  switch 80  
+[2016/03/09 18:38:15 641] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:15 846] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 847] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:15 850] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:15 855] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 860] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 862] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:15 864] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:15 865] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:15 865] transport  315  soc_conn_failed  
+[2016/03/09 18:38:15 865] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:15 869] transport  384  switch 80  
+[2016/03/09 18:38:15 870] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:16 074] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 075] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:16 078] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:16 081] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 085] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 085] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:16 088] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:16 089] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:16 089] transport  315  soc_conn_failed  
+[2016/03/09 18:38:16 089] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 094] transport  384  switch 80  
+[2016/03/09 18:38:16 094] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:16 300] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 300] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:16 304] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:16 309] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 313] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 315] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:16 319] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:16 320] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:16 320] transport  315  soc_conn_failed  
+[2016/03/09 18:38:16 320] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 324] transport  384  switch 80  
+[2016/03/09 18:38:16 325] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:16 529] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 530] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:16 533] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:16 536] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 540] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 540] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:16 543] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:16 543] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:16 544] transport  315  soc_conn_failed  
+[2016/03/09 18:38:16 544] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 548] transport  384  switch 80  
+[2016/03/09 18:38:16 549] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:16 754] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 754] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:16 758] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:16 763] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 767] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 768] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:16 773] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:16 774] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:16 774] transport  315  soc_conn_failed  
+[2016/03/09 18:38:16 775] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 779] transport  384  switch 80  
+[2016/03/09 18:38:16 780] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:16 984] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 984] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:16 987] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:16 990] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 994] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:16 995] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:16 997] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:16 998] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:16 998] transport  315  soc_conn_failed  
+[2016/03/09 18:38:16 998] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 002] transport  384  switch 80  
+[2016/03/09 18:38:17 003] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:17 207] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 208] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:17 212] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:17 217] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 221] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 222] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:17 226] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:17 228] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:17 228] transport  315  soc_conn_failed  
+[2016/03/09 18:38:17 228] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 233] transport  384  switch 80  
+[2016/03/09 18:38:17 234] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:17 442] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 443] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:17 445] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:17 449] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 453] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 453] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:17 456] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:17 456] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:17 456] transport  315  soc_conn_failed  
+[2016/03/09 18:38:17 457] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 460] transport  384  switch 80  
+[2016/03/09 18:38:17 461] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:17 515] isr_1conn  236  The called number of status_cb_timeout:  3  
+[2016/03/09 18:38:17 667] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 668] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:17 671] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:17 676] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 681] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 683] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:17 686] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:17 687] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:17 687] transport  315  soc_conn_failed  
+[2016/03/09 18:38:17 687] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 691] transport  384  switch 80  
+[2016/03/09 18:38:17 692] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:17 897] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 897] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:17 900] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:17 904] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 907] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 908] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:17 910] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:17 911] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:17 911] transport  315  soc_conn_failed  
+[2016/03/09 18:38:17 911] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:17 915] transport  384  switch 80  
+[2016/03/09 18:38:17 916] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:18 122] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 123] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:18 126] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:18 131] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 137] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 138] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:18 141] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:18 142] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:18 142] transport  315  soc_conn_failed  
+[2016/03/09 18:38:18 142] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 147] transport  384  switch 80  
+[2016/03/09 18:38:18 147] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:18 353] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 354] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:18 357] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:18 363] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 367] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 368] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:18 372] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:18 373] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:18 373] transport  315  soc_conn_failed  
+[2016/03/09 18:38:18 373] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 379] transport  384  switch 80  
+[2016/03/09 18:38:18 380] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:18 589] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 590] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:18 598] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:18 603] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 610] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 610] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:18 614] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:18 614] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:18 615] transport  315  soc_conn_failed  
+[2016/03/09 18:38:18 615] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 619] transport  384  switch 80  
+[2016/03/09 18:38:18 621] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:18 824] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 825] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:18 828] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:18 834] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 838] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 839] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:18 842] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:18 843] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:18 843] transport  315  soc_conn_failed  
+[2016/03/09 18:38:18 843] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:18 848] transport  384  switch 80  
+[2016/03/09 18:38:18 849] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 055] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 055] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:19 059] transport  289  [dns] [1] failed! 10214  
+[2016/03/09 18:38:19 065] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 069] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 069] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:19 073] transport  536  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:19 074] transport  542  socket_notify_handler, try2conn_times =  1  
+[2016/03/09 18:38:19 074] transport  315  soc_conn_failed  
+[2016/03/09 18:38:19 074] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 079] transport  384  switch 80  
+[2016/03/09 18:38:19 080] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 080] transport  49   throw_exception  10202  101  MSC:[soc] [1] error 10202 101!  
+[2016/03/09 18:38:19 081] isr_1conn  716  transport exception  10202  slave  
+[2016/03/09 18:38:19 085] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 085] transport  868  iplist not avail  
+[2016/03/09 18:38:19 086] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 090] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 090] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:19 120] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:19 123] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 127] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 127] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:19 134] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:19 134] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:19 134] transport  315  soc_conn_failed  
+[2016/03/09 18:38:19 135] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 139] transport  384  switch 80  
+[2016/03/09 18:38:19 139] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 344] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 345] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:19 348] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:19 353] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 359] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 360] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:19 363] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:19 363] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:19 363] transport  315  soc_conn_failed  
+[2016/03/09 18:38:19 364] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 368] transport  384  switch 80  
+[2016/03/09 18:38:19 369] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 572] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 573] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:19 576] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:19 579] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 583] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 584] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:19 586] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:19 587] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:19 587] transport  315  soc_conn_failed  
+[2016/03/09 18:38:19 587] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 591] transport  384  switch 80  
+[2016/03/09 18:38:19 591] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:19 797] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 797] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:19 801] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:19 806] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 810] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 812] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:19 818] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:19 819] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:19 819] transport  315  soc_conn_failed  
+[2016/03/09 18:38:19 819] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:19 823] transport  384  switch 80  
+[2016/03/09 18:38:19 824] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:20 029] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 029] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:20 032] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:20 036] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 039] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 040] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:20 042] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:20 043] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:20 043] transport  315  soc_conn_failed  
+[2016/03/09 18:38:20 043] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 047] transport  384  switch 80  
+[2016/03/09 18:38:20 048] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:20 252] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 252] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:20 256] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:20 261] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 265] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 266] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:20 270] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:20 271] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:20 272] transport  315  soc_conn_failed  
+[2016/03/09 18:38:20 272] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 277] transport  384  switch 80  
+[2016/03/09 18:38:20 278] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:20 483] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 483] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:20 486] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:20 490] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 493] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 494] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:20 496] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:20 497] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:20 497] transport  315  soc_conn_failed  
+[2016/03/09 18:38:20 497] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 501] transport  384  switch 80  
+[2016/03/09 18:38:20 502] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:20 516] isr_1conn  236  The called number of status_cb_timeout:  4  
+[2016/03/09 18:38:20 708] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 709] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:20 712] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:20 717] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 723] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 724] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:20 726] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:20 727] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:20 727] transport  315  soc_conn_failed  
+[2016/03/09 18:38:20 727] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 731] transport  384  switch 80  
+[2016/03/09 18:38:20 732] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:20 937] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 937] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:20 940] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:20 943] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 947] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 948] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:20 950] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:20 950] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:20 951] transport  315  soc_conn_failed  
+[2016/03/09 18:38:20 951] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:20 955] transport  384  switch 80  
+[2016/03/09 18:38:20 956] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:21 163] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 163] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:21 167] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:21 171] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 176] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 179] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:21 182] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:21 182] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:21 183] transport  315  soc_conn_failed  
+[2016/03/09 18:38:21 183] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 187] transport  384  switch 80  
+[2016/03/09 18:38:21 188] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:21 392] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 392] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:21 395] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:21 399] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 402] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 403] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:21 405] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:21 406] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:21 406] transport  315  soc_conn_failed  
+[2016/03/09 18:38:21 406] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 410] transport  384  switch 80  
+[2016/03/09 18:38:21 411] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:21 618] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 619] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:21 622] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:21 627] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 632] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 635] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:21 637] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:21 638] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:21 638] transport  315  soc_conn_failed  
+[2016/03/09 18:38:21 638] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 642] transport  384  switch 80  
+[2016/03/09 18:38:21 643] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:21 848] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 848] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:21 851] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:21 855] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 858] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 859] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:21 861] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:21 862] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:21 862] transport  315  soc_conn_failed  
+[2016/03/09 18:38:21 862] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:21 866] transport  384  switch 80  
+[2016/03/09 18:38:21 867] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:22 073] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 074] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:22 077] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:22 082] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 087] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 089] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:22 092] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:22 093] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:22 093] transport  315  soc_conn_failed  
+[2016/03/09 18:38:22 093] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 097] transport  384  switch 80  
+[2016/03/09 18:38:22 098] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:22 303] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 304] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:22 306] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:22 310] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 313] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 315] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:22 317] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:22 318] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:22 318] transport  315  soc_conn_failed  
+[2016/03/09 18:38:22 318] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 322] transport  384  switch 80  
+[2016/03/09 18:38:22 323] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:22 530] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 530] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:22 534] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:22 539] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 544] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 546] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:22 548] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:22 549] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:22 549] transport  315  soc_conn_failed  
+[2016/03/09 18:38:22 549] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 553] transport  384  switch 80  
+[2016/03/09 18:38:22 554] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:22 759] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 759] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:22 762] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:22 766] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 769] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 770] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:22 772] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:22 773] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:22 773] transport  315  soc_conn_failed  
+[2016/03/09 18:38:22 773] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 777] transport  384  switch 80  
+[2016/03/09 18:38:22 778] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:22 984] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 985] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:22 988] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:22 993] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 997] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:22 999] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:23 004] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:23 005] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:23 005] transport  315  soc_conn_failed  
+[2016/03/09 18:38:23 005] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 010] transport  384  switch 80  
+[2016/03/09 18:38:23 011] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:23 216] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 217] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:23 221] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:23 227] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 231] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 233] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:23 236] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:23 237] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:23 237] transport  315  soc_conn_failed  
+[2016/03/09 18:38:23 237] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 243] transport  384  switch 80  
+[2016/03/09 18:38:23 244] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:23 449] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 450] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:23 454] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:23 460] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 464] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 464] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:23 467] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:23 467] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:23 468] transport  315  soc_conn_failed  
+[2016/03/09 18:38:23 468] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 472] transport  384  switch 80  
+[2016/03/09 18:38:23 473] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:23 517] isr_1conn  236  The called number of status_cb_timeout:  5  
+[2016/03/09 18:38:23 677] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 678] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:23 680] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:23 684] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 687] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 688] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:23 690] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:23 691] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:23 691] transport  315  soc_conn_failed  
+[2016/03/09 18:38:23 691] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 695] transport  384  switch 80  
+[2016/03/09 18:38:23 696] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:23 907] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 907] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:23 913] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:23 917] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 920] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 921] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:23 925] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:23 927] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:23 927] transport  315  soc_conn_failed  
+[2016/03/09 18:38:23 927] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:23 932] transport  384  switch 80  
+[2016/03/09 18:38:23 933] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 139] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 139] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:24 142] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:24 145] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 149] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 150] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:24 152] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:24 153] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:24 153] transport  315  soc_conn_failed  
+[2016/03/09 18:38:24 153] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 157] transport  384  switch 80  
+[2016/03/09 18:38:24 158] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 364] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 365] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:24 370] transport  289  [dns] [2] failed! 10214  
+[2016/03/09 18:38:24 374] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 378] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 379] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:24 381] transport  536  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:24 382] transport  542  socket_notify_handler, try2conn_times =  1  
+[2016/03/09 18:38:24 382] transport  315  soc_conn_failed  
+[2016/03/09 18:38:24 382] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 386] transport  384  switch 80  
+[2016/03/09 18:38:24 387] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 387] transport  49   throw_exception  10202  101  MSC:[soc] [2] error 10202 101!  
+[2016/03/09 18:38:24 387] isr_1conn  716  transport exception  10202  slave  
+[2016/03/09 18:38:24 391] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 391] transport  868  iplist not avail  
+[2016/03/09 18:38:24 392] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 396] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 396] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:24 426] transport  289  [dns] [3] failed! 10214  
+[2016/03/09 18:38:24 431] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 434] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 435] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:24 440] transport  536  MSC:[soc] [3] error 10202 101!  
+[2016/03/09 18:38:24 440] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:24 441] transport  315  soc_conn_failed  
+[2016/03/09 18:38:24 441] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 445] transport  384  switch 80  
+[2016/03/09 18:38:24 446] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 650] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 650] transport  1033 ns_i =  nil  
+[2016/03/09 18:38:24 675] transport  289  [dns] [3] failed! 10214  
+[2016/03/09 18:38:24 681] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 684] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 685] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/09 18:38:24 687] transport  536  MSC:[soc] [3] error 10202 101!  
+[2016/03/09 18:38:24 688] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/09 18:38:24 688] transport  315  soc_conn_failed  
+[2016/03/09 18:38:24 688] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 692] transport  384  switch 80  
+[2016/03/09 18:38:24 693] transport  1139 [soc] disconnect   
+[2016/03/09 18:38:24 723] isr_1conn  2151 netperf_session_timeout =   20  
+[2016/03/09 18:38:24 723] isr_1conn  2154 MSC:session timeout!  
+[2016/03/09 18:38:24 729] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/09 18:38:24 729] transport  868  iplist not avail  
+[2016/03/09 18:38:24 730] transport  1139 [soc] disconnect   

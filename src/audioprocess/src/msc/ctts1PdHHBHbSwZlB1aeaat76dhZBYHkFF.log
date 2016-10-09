@@ -1,0 +1,391 @@
+============================================================
+Time  2016/03/19 01:15:52 606 
+============================================================
+[2016/03/19 01:15:52 607] tts        620  SYS_MSG_REGCB param0 =  msp_status_cb  param1 =  func(74811570) 
+[2016/03/19 01:15:52 614] config     16   now we use general cloud  
+[2016/03/19 01:15:52 628] tts_cloud  1327 SYS_MSG_REGCB_CLOUD param0 =   msp_status_cb  param1 =  func(74811570) 
+[2016/03/19 01:15:52 630] tts        593  TTS_MSG_SSB  
+[2016/03/19 01:15:52 630] tts        446  ssb|use cloud  
+[2016/03/19 01:15:52 631] tts_cloud  1298 SYS_MSG_LOAD_CLOUD  
+[2016/03/19 01:15:52 631] tts_cloud  899  TTS_MSG_SSB_CLOUD  
+[2016/03/19 01:15:52 632] tts_cloud  919  tts  ctts1PdHHBHbSwZlB1aeaat76dhZBYHkFF  268436457  1428405388  
+[2016/03/19 01:15:52 634] tts_cloud  965  not login!  
+[2016/03/19 01:15:52 637] tts_cloud  1092 TTS_MSG_SSB | aue=  speex-wb;7   auf=  audio/L16;rate=16000  
+[2016/03/19 01:15:52 637] tts_cloud  1102 User set url is   nil  
+[2016/03/19 01:15:52 637] transport  596  paramkvsport is   nil  
+[2016/03/19 01:15:52 638] transport  801  net type:  standard  
+[2016/03/19 01:15:52 638] transport  802  net operator:  def  
+[2016/03/19 01:15:52 638] transport  803  use proxy:  false  
+[2016/03/19 01:15:52 644] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 645] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:52 649] tts        598  TTS_MSG_SYN  0  
+[2016/03/19 01:15:52 650] tts        486  synth|use cloud  
+[2016/03/19 01:15:52 650] tts_cloud  1118 TTS_MSG_SYN_CLOUD  
+[2016/03/19 01:15:52 651] tts_cloud  1129 remote_connected =  false  
+[2016/03/19 01:15:52 654] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:52 658] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 664] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 664] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:52 667] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:52 668] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:52 668] transport  315  soc_conn_failed  
+[2016/03/19 01:15:52 668] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 674] transport  384  switch 80  
+[2016/03/19 01:15:52 675] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:52 677] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:52 677] tts        539  get audio|use cloud  
+[2016/03/19 01:15:52 678] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:52 830] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:52 830] tts        539  get audio|use cloud  
+[2016/03/19 01:15:52 830] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:52 881] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 881] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:52 884] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:52 888] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 891] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 892] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:52 894] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:52 894] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:52 894] transport  315  soc_conn_failed  
+[2016/03/19 01:15:52 894] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:52 898] transport  384  switch 80  
+[2016/03/19 01:15:52 900] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:52 982] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:52 982] tts        539  get audio|use cloud  
+[2016/03/19 01:15:52 982] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 104] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 104] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:53 107] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:53 111] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 114] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 114] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:53 116] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:53 117] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:53 117] transport  315  soc_conn_failed  
+[2016/03/19 01:15:53 117] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 121] transport  384  switch 80  
+[2016/03/19 01:15:53 122] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:53 134] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 134] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 134] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 286] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 287] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 287] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 326] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 327] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:53 329] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:53 333] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 336] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 336] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:53 338] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:53 339] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:53 339] transport  315  soc_conn_failed  
+[2016/03/19 01:15:53 339] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 343] transport  384  switch 80  
+[2016/03/19 01:15:53 344] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:53 439] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 439] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 439] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 548] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 548] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:53 551] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:53 555] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 558] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 558] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:53 561] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:53 561] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:53 561] transport  315  soc_conn_failed  
+[2016/03/19 01:15:53 561] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 565] transport  384  switch 80  
+[2016/03/19 01:15:53 567] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:53 591] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 591] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 591] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 743] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 743] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 743] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 772] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 773] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:53 775] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:53 779] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 783] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 783] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:53 785] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:53 786] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:53 786] transport  315  soc_conn_failed  
+[2016/03/19 01:15:53 786] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 790] transport  384  switch 80  
+[2016/03/19 01:15:53 790] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:53 895] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:53 896] tts        539  get audio|use cloud  
+[2016/03/19 01:15:53 896] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:53 996] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:53 996] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:53 999] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:54 003] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 682] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 682] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:54 684] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:54 685] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:54 685] transport  315  soc_conn_failed  
+[2016/03/19 01:15:54 685] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 690] transport  384  switch 80  
+[2016/03/19 01:15:54 691] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:54 692] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:54 693] tts        539  get audio|use cloud  
+[2016/03/19 01:15:54 693] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:54 845] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:54 845] tts        539  get audio|use cloud  
+[2016/03/19 01:15:54 845] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:54 896] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 896] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:54 899] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:54 904] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 907] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 908] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:54 910] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:54 911] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:54 911] transport  315  soc_conn_failed  
+[2016/03/19 01:15:54 911] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:54 915] transport  384  switch 80  
+[2016/03/19 01:15:54 916] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:54 997] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:54 997] tts        539  get audio|use cloud  
+[2016/03/19 01:15:54 998] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 120] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 121] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:55 123] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:55 127] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 130] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 130] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:55 132] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:55 133] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:55 133] transport  315  soc_conn_failed  
+[2016/03/19 01:15:55 133] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 137] transport  384  switch 80  
+[2016/03/19 01:15:55 138] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:55 149] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 149] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 150] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 301] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 302] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 302] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 342] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 343] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:55 345] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:55 349] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 352] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 353] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:55 355] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:55 356] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:55 356] transport  315  soc_conn_failed  
+[2016/03/19 01:15:55 356] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 360] transport  384  switch 80  
+[2016/03/19 01:15:55 361] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:55 454] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 454] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 454] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 566] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 566] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:55 568] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:55 572] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 576] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 576] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:55 578] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:55 578] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:55 579] transport  315  soc_conn_failed  
+[2016/03/19 01:15:55 579] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 583] transport  384  switch 80  
+[2016/03/19 01:15:55 584] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:55 606] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 606] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 606] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 758] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 758] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 758] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:55 789] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 789] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:55 792] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:55 795] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 800] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 801] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:55 803] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:55 803] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:55 804] transport  315  soc_conn_failed  
+[2016/03/19 01:15:55 804] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:55 807] transport  384  switch 80  
+[2016/03/19 01:15:55 808] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:55 910] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:55 911] tts        539  get audio|use cloud  
+[2016/03/19 01:15:55 911] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 013] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 014] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:56 016] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:56 020] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 023] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 023] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:56 025] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:56 026] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:56 026] transport  315  soc_conn_failed  
+[2016/03/19 01:15:56 026] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 030] transport  384  switch 80  
+[2016/03/19 01:15:56 032] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:56 063] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 063] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 063] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 215] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 215] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 215] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 236] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 237] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:56 240] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:56 247] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 252] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 253] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:56 255] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:56 256] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:56 256] transport  315  soc_conn_failed  
+[2016/03/19 01:15:56 257] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 262] transport  384  switch 80  
+[2016/03/19 01:15:56 265] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:56 367] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 368] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 368] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 471] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 471] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:56 475] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:56 480] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 485] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 485] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:56 488] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:56 489] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:56 490] transport  315  soc_conn_failed  
+[2016/03/19 01:15:56 490] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 495] transport  384  switch 80  
+[2016/03/19 01:15:56 499] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:56 520] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 521] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 521] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 673] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 673] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 674] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 707] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 707] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:56 711] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:56 716] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 721] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 722] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:56 725] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:56 725] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:56 726] transport  315  soc_conn_failed  
+[2016/03/19 01:15:56 726] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 731] transport  384  switch 80  
+[2016/03/19 01:15:56 735] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:56 826] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 826] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 827] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:56 941] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 942] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:56 945] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:56 950] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 954] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 955] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:56 958] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:56 958] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:56 959] transport  315  soc_conn_failed  
+[2016/03/19 01:15:56 959] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:56 964] transport  384  switch 80  
+[2016/03/19 01:15:56 967] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:56 979] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:56 979] tts        539  get audio|use cloud  
+[2016/03/19 01:15:56 980] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 132] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 132] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 132] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 173] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 173] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:57 177] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:57 182] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 186] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 187] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:57 190] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:57 190] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:57 191] transport  315  soc_conn_failed  
+[2016/03/19 01:15:57 191] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 197] transport  384  switch 80  
+[2016/03/19 01:15:57 201] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:57 285] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 285] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 286] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 408] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 409] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:57 413] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:57 418] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 423] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 423] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:57 426] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:57 427] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:57 427] transport  315  soc_conn_failed  
+[2016/03/19 01:15:57 428] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 433] transport  384  switch 80  
+[2016/03/19 01:15:57 434] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:57 440] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 440] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 441] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 593] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 593] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 593] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 642] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 642] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:57 646] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:57 651] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 655] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 656] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:57 659] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:57 660] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:57 660] transport  315  soc_conn_failed  
+[2016/03/19 01:15:57 660] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 665] transport  384  switch 80  
+[2016/03/19 01:15:57 667] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:57 746] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 746] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 746] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:57 873] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 873] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:57 877] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:57 882] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 887] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 887] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:57 890] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:57 891] transport  542  socket_notify_handler, try2conn_times =  2  
+[2016/03/19 01:15:57 891] transport  315  soc_conn_failed  
+[2016/03/19 01:15:57 891] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:57 897] transport  384  switch 80  
+[2016/03/19 01:15:57 899] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:57 900] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:57 905] tts        539  get audio|use cloud  
+[2016/03/19 01:15:57 905] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:58 058] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:58 058] tts        539  get audio|use cloud  
+[2016/03/19 01:15:58 059] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:58 106] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:58 107] transport  1033 ns_i =  nil  
+[2016/03/19 01:15:58 110] transport  289  [dns] [0] failed! 10214  
+[2016/03/19 01:15:58 115] network    85   ipfromenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:58 121] network    85   ipfromenv ,  ipcfg  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:58 121] transport  1108 [soc] connect   116.213.69.195  80  
+[2016/03/19 01:15:58 124] transport  536  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:58 125] transport  542  socket_notify_handler, try2conn_times =  1  
+[2016/03/19 01:15:58 125] transport  315  soc_conn_failed  
+[2016/03/19 01:15:58 125] network    90   iptoenv ,  ipcache  dev.voicecloud.cn  def  nil  
+[2016/03/19 01:15:58 132] transport  384  switch 80  
+[2016/03/19 01:15:58 135] transport  1139 [soc] disconnect   
+[2016/03/19 01:15:58 136] transport  49   throw_exception  10202  101  MSC:[soc] [0] error 10202 101!  
+[2016/03/19 01:15:58 136] tts_cloud  490  [trans] [tts_cloudctts1PdHHBHbSwZlB1aeaat76dhZBYHkFF] exception 10202  
+[2016/03/19 01:15:58 211] tts        601  TTS_MSG_GETAUDIO  0  
+[2016/03/19 01:15:58 211] tts        539  get audio|use cloud  
+[2016/03/19 01:15:58 212] tts_cloud  1217 TTS_MSG_GETAUDIO_CLOUD | synth_status  1  
+[2016/03/19 01:15:58 214] tts        604  TTS_MSG_SSE  
+[2016/03/19 01:15:58 214] tts        578  sse|use cloud  
+[2016/03/19 01:15:58 214] tts_cloud  1220 TTS_MSG_SSE_CLOUD  
+[2016/03/19 01:15:58 215] tts_cloud  791  tts session info  

@@ -1,0 +1,8 @@
+Header header
+
+uint32 cmd_brain     # shutup or bb
+uint32 content
+string txt
+---
+bool status
+

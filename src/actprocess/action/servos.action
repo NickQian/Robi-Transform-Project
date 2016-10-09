@@ -1,0 +1,40 @@
+#goal    |  shoulderL / shoulderR /elbowL / elbowR / head / kneeL / kneeR
+uint8   servoID
+int16   goalAngle
+uint16  goalTime
+
+uint8 head_H        = 1
+uint8 shoulder_L    = 2
+uint8 arm_L         = 3
+uint8 forearm_L     = 4
+#uint8 elbow_L
+uint8 shoulder_R    = 5
+uint8 arm_R         = 6
+uint8 forearm_R     = 7
+#uint8 elbow_R   
+uint8 knee_L        = 8
+uint8 ankle_L       = 9
+uint8 knee_R        = 10
+uint8 ankle_R       = 11
+
+
+---
+#result
+uint8  result
+
+uint8  PENDING    = 0  # the goal has not yet to be processed by server
+uint8  ACTIVE     = 1  # the goal us processing
+uint8  PREEMPTED  = 2  # the goal received a cancel request <after> start executing
+uint8  SUCCEEDED  = 3  # goal achieved
+uint8  ABORTED    = 4  # by server dur to failure
+uint8  REJECTED   = 5  # by server because goal was unattainable or invalid
+uint8  PREEMPTING = 6  # the goal received a cancel request after start executing(adn has not yet complete exe)
+uint8  RECALLING  = 7  # the goal received a cancel request <before> start executing ...
+uint8  RECALLED   = 8
+uint8  LOST       = 9  # cliet determine that a goal is LOST
+
+---
+#feedback
+int16  current_position
+
+

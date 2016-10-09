@@ -1,0 +1,15 @@
+#goal
+uint8 walk_to
+
+---
+#result
+uint8 result
+
+uint8 PENDING   = 0
+uint8 ACTIVE    = 1
+uint8 PREEMPTED = 2
+uint8 SUCCEEDED = 3
+
+---
+#feedback
+uint8 progress  
