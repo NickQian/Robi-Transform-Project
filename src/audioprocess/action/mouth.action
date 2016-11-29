@@ -1,0 +1,31 @@
+# goal
+uint8  sentenceType
+#uint8  character
+uint8  speed
+uint8  mood
+string txt_req
+
+
+uint8  TYPE_DECLARATIVE   = 1
+uint8  TYPE_INTERROGATIVE = 2
+uint8  TYPE_EXCLAMATION   = 3
+uint8  TYPE_IMPERATIVE    = 4
+
+uint8  MOOD_ELATION = 1
+uint8  MOOD_CALM    = 2
+uint8  MOOD_ANGRY   = 3
+uint8  MOOD_DOWN    = 4
+
+
+---
+# result
+
+uint8  PENDING   = 0
+uint8  ACTIVE    = 1
+uint8  PREEMPTED = 2
+uint8  ABORTED   = 3
+uint8  ABORTED   = 4
+
+---
+#feedback
+uint8 status

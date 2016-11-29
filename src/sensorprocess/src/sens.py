@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # ultrasonic to measure distance -2015.12.10
 # PM2.5 sensor, motion sensor, geomagnetism sensor
 # http://www.raspberrypi-spy.co.uk/archive/python/ultrasonic_1.py
@@ -12,19 +13,20 @@ import rospy
 #from std_msgs.msg import String
 from sensorprocess.msg import sensorsMsg
 
-class sensors:
+class sensors( ):
      def __init__(self):
-          self.battery = 77
-          self.mechanic = 77
-          self.count = 77
-          rospy.init_node('sens')
+          self.battery = 10
+          self.mechanic = 20
+          self.ID_hottest = 9
+          self.count = 30
+          rospy.init_node('node_sens')
           self.pub = rospy.Publisher('tpc_sens', sensorsMsg, queue_size = 3 )
           self.rate = rospy.Rate(1)   
 
      def pub_sensors(self):
-          self.pub.publish( sensorsMsg(None, self.battery, self.mechanic) )    #rospy will fill header automatically
-          print ("Info: <pub_sensors> executed. battery is %d, mechanic is %d" %(self.battery, self.mechanic) )
-          #rospy.spin( )
+          self.pub.publish( sensorsMsg(None, self.battery, self.mechanic, self.ID_hottest) )    #rospy will fill header automatically
+
+          print ("Info: <pub_sensors>. battery is %d, mechanic is %d, self.ID_hottest is %d" %(self.battery, self.mechanic, self.ID_hottest ) )
           
           
      def launch(self):
@@ -32,6 +34,7 @@ class sensors:
                self.catchInput()
                self.pub_sensors( )               
                self.rate.sleep( )
+               
      
      def update_accelerometer(self ):
           pass
@@ -52,7 +55,7 @@ class sensors:
                self.count += 1
                
           self.battery = self.count
-          self.mechanic = self.count
+          self.mechanic = 100-self.count
 
 
 """
@@ -65,9 +68,12 @@ sensors['infrareRay']    =    infrareRay
 sensors['accelerometer'] =    accelerometer
 """
 
-if __name__ == '__main__':
+def main():
      sens = sensors()
      sens.launch()
 
+
+if __name__ == '__main__':
+     main()
 
 

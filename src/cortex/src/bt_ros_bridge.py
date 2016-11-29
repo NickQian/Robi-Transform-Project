@@ -13,7 +13,7 @@ class MonitorTask(Task):
         super(MonitorTask, self).__init__(name)
 
         self.topic = topic
-        self.msg_type = msg_tpe
+        self.msg_type = msg_type
         self.timeout = timeout
         self.msg_cb = msg_cb
 
@@ -37,7 +37,7 @@ class MonitorTask(Task):
         pass
 
 class ServiceTask(Task):
-    """ A ROS Service"""
+    """ turn ROS serviceProxy into task"""
     def __init__(self, name, service, service_type, request, result_cb = None, wait_for_service=True, timeout=5):
         super(ServiceTask, self).__init__(name)
 
@@ -72,7 +72,9 @@ class ServiceTask(Task):
 
 class SimpleActionTask(Task):
     """ client of ROS action """
-    pass
+    def __init__(self, name, action, action_type, goal, rate=5, connect_timeout=10, result_timeout=30, reset_after=False, active_cb=None, done_cb=None, feedback_cb=None):
+        super(SimpleActionTask, self).__init__(name)
+        
             
 
 

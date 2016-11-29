@@ -103,7 +103,7 @@ class Selector(Task):
  
     def run(self):
         for c in self.children:
-            
+            print ("DBG:c in (Selector) is:", c)    #NickQian
             c.status = c.run()
             
             if c.status != TaskStatus.FAILURE:
@@ -133,7 +133,7 @@ class Sequence(Task):
             self.announce()
             
         for c in self.children:
-            
+            print ("DBG: c in (Sequence) is:", c)    #NickQian
             c.status = c.run()
                          
             if c.status != TaskStatus.SUCCESS:
@@ -280,6 +280,7 @@ class ParallelOne(Task):
 
         if self.index < n_children:
             child = self.children[self.index]
+            print ("DBG: child in (ParallelOne) is:", child)    #NickQian
             child.status = child.run()
             
             if child.status != TaskStatus.SUCCESS:

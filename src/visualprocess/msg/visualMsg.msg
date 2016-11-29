@@ -2,37 +2,11 @@ Header header
 
 time stamp
 
-#ObjectDetects objDetects
+bool     motion_detected
+box      roi
 
-bool      motion_detected
-box       roi
+multiBox     rect_facesDetected
+multiBoxWTag facesRecog              # recog one face is in service
 
-multiBox  peopleDetects
-
-bool[]      poi
-bool[]      ooi
-
-multiBox  ooi_position
-multiBox  poi_postion
-
-string[] objRecog
-string[] peopleRecog
-
-
-
-#uint8 msgtype
-#uint8 len
-#uint8[] data
-#uint32 times_ms
-#uint16 time_us
-#uint32 id
-
-
-#string frame_id
-#string EXAMPLE=''
-#duration 
-#bool       #unsigned 8-bit int
-
-
-
-
+multiBox     peopleDetected
+multiBoxWTag peopleRecog            # people tagged with position updated 

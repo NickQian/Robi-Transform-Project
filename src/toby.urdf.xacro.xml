@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<robot xlns:xacro="http://ros.org/wiki/xacro">
+
+<!-- dummy first link, directly connects with torso -->
+  <link name="base_link" />
+
+  <link name="torso">
+     <inertial>
+       <origin xyz = "-0.00413 0.00009 0.04342" rpy="0 0 0" />
+       <mass value="1.03491"/>
+       <inertial ixx = "0.12345678901" ixy="-0.00112233445" ixz="-0.12345678901" iyy="0.12345678901" iyz="0.00002224589" izz="0.001122334455" />
+     </inertial>
+     <xacro:insert_visualization_torso/>
+  </link>
+
+  <link name="HeadPitch_link">
+    <inertial>
+      <origin xyz="-0.00112 -0.00003 0.05258" rpy="0 0 0"/>
+      <mass value="0.60533"/>
+      <inertia ixx="0.00208895741"  ixy="0.00000549094"  ixz="0.0001133995" iyy="1932222.63e-9" iyz="-0.00002803917" izz="0.00082257793" />
+    </inertial>
+    <xacro:insert_visualization_head/>
+  </link>
+ 
+  <link name="gaze" />
+
+  <link name="Camera">
+    <xacro:insert_visualization_camera />
+  </link>
+
+  <!--   ....   -->
+
+  <!-- Arm -->
+  <xacro:macro name="arm_links" params="side reflect" >
+
+  <link name = "${size}ShoulderPitch_link">
+    <inertial>
+      <origin xyz="-0.00165 ${reflect*-0.02663} 0.00014" rpy="0 0 0"/>
+      <mass value="0.07504"/>
+      <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+
+  <link name = "${side}Elbow_link">
+    <inertial>
+      <origin xyz="-0.02744 0.00000 -0.00014" rpy="0 0 0"/>
+      <mass value="0.06483"/>
+      <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+
+    <link name = "RShoulderRoll_link" >
+    <inertial>
+      <origin xyz="0.02429 -0.00952 0.00320" rpy="0 0 0"/>
+      <mass value="0.15794"/>
+      <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <xacro:insert_visualization_arm side="R"/>
+  </link>
+
+  <link name = "LShoulderRoll_link" >
+    <inertial>
+      <origin xyz="0.02455 0.00563 0.00330" rpy="0 0 0"/>
+      <mass value="0.15777"/>
+      <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    <xacro:insert_visualization_arm side="L"/>
+  </link>
+
+  <!-- Leg link -->
+  
+
+
+<!-- Joints following below -->
+  <joint name="base_joint" type="fixed">
+    <child link="torso"/>
+    <parent link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- Head Joints -->
+ 
+  <joint name="HeadYaw" type="revolute">
+    <parent link="torso"/>
+    <child link="HeadYaw_link" />
+    <origin xyz = "0 0 0.1265" rpy="0 0 0" />
+    <axiz xyz="0 0 1" />
+    <limit velocity="3.0" effort = "30" lower="-2.0123" upper = "2.0123" />
+
+  <!-- Arm joints -->
+  <xacro:macro name = "arm_joints" params="side reflect">
+
+  <joint name = "${side}ShoulderPitch" type="revolute">
+    <parent link="torso"/>
+    <child link = "${side}ShoulderPitch_link"/>
+    <origin xyz="0 ${reflect*-0.098} 0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit velocity="3.0" effort="30" lower="-2.0857" upper="2.0857"/>
+  </joint>
+
+  <joint name="${side}ElbowYaw" type="revolute">
+    <parent link="${side}ShoulderRoll_link"/>
+    <child link="${side}ElbowYaw_link"/>
+    <origin xyz="0.105 ${reflect*-0.015} 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="3.0" effort="30" lower="-2.0857" upper="2.0857"/>
+  </joint>
+
+  <joint name="LShoulderRoll" type="revolute">
+    <parent link="LShoulderPitch_link"/>
+    <child link="LShoulderRoll_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit velocity="3.0" effort="30" lower="-0.3142" upper="1.3265"/>
+  </joint>
+  <joint name="RShoulderRoll" type="revolute">
+    <parent link="RShoulderPitch_link"/>
+    <child link="RShoulderRoll_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit velocity="3.0" effort="30" lower="-1.3265" upper="0.3142"/>
+  </joint>
+
+  <xacro:arm_joints side="L" reflect="-1"/>
+  <xacro:arm_joints side="R" reflect="1"/>
+
+<!-- Leg Joints  -->
+
+  <xacro:macro name="leg_joints" params="side reflect">
+ 
+  <joint name="${side}KneePitch" type="revolute">
+    <parent link="${side}HipPitch_link"/>
+    <child link="${side}KneePitch_link"/>
+    <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <!-- LKneePitch limits: -0.092346 .. 2.112528 -->
+    <!-- RKneePitch limits: -0.103083 .. 2.120198 -->
+    <limit velocity="3.0" effort="30" lower="-0.092346" upper="2.112528"/>
+  </joint>
+
+  </xacro:macro>
+
+  <xacro:leg_joints side="L" reflect="-1"/>
+  <xacro:leg_joints side="R" reflect="1"/>
+
+</robot>

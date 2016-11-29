@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 """
- paleopallium level. As a animal
+ paleopallium level. As a animal processes move/SLAM etc...
  -----
  Licensed under BSD license. 
  by Nick Qian  -2015.11.13
+ -----
+ input:  pubed msgs and neo cmd from cortexn
+ Output: action client req
 """
 
 import random
@@ -51,6 +54,7 @@ class cortexp( ):
           #self.actGoal = actprocess.msg.servosGoal(servoID= req_servoID, goalAngle = req_goalAngle, goalTime = req_goalTime)
           self.actGoal = actPatternGoal( )          
           self.mycortexpMsg = cortexpMsg()
+          #print ("====>>> type of actPatternAction, actPatternGoal:", actPatternAction, actPatternGoal )
 
           # Insts for Interfaces
           self._as = actionlib.SimpleActionServer('CortexpAction', cortexpAction, self.cortexpActionExecute, False) #name of the server
@@ -63,12 +67,13 @@ class cortexp( ):
           self.cmd_arms = ''          
 
           rospy.init_node('node_cortexp')                                                                                                  #Init node for node?? client don't need to init node?
-          self.act_client = actionlib.SimpleActionClient('actPattern',  actPatternAction )             #( )
+          self.act_client = actionlib.SimpleActionClient('srv_actPattern',  actPatternAction )             #( )
           #self.act_client.wait_for_server( )                                                                                      # until the server has started up, listen for the goal
           self.rate = rospy.Rate(2)           #1Hz
           
           self.visual_cb_flag = False
           self.sub_count = 0
+          self.visual_track_switch_last = False
 
      
      def launch(self):
@@ -212,12 +217,9 @@ class cortexp( ):
                     self.actGoal.op = actPatternGoal.PATTERN_OPERATION
                     self.actGoal.pattern = actPatternGoal.VISUAL_TRACK
                     self.actGoal.visual_track_switch = True
+                    
                     (self.actGoal.roi.x, self.actGoal.roi.y, self.actGoal.roi.height, self.actGoal.roi.width) = self.roi
                     print ('===CMD MOVE=== Will do client req in callback. switch is:, x is:', self.actGoal.visual_track_switch, self.actGoal.roi.x)
-                    self.act_client_req(self.actGoal)
-               else:
-                    self.actGoal.visual_track_switch = False               
-                    print ('=--CMD NO MOVE--=Will do client req in callback. switch is:, x is:', self.actGoal.visual_track_switch, self.actGoal.roi.x)
                     res = self.act_client_req(self.actGoal)
                     
                     if actPatternResult.SUCCEEDED == res.result:
@@ -227,6 +229,13 @@ class cortexp( ):
                          except:
                               traceback.print_exec()
                               print ("~~~~~~~~~~~~ DBG:: Pub Once!~~~~~~~~~~~")
+               else:
+                    self.actGoal.visual_track_switch = False               
+                    print ('=--CMD NO MOVE--=Will do client req in callback. switch is:, x is:', self.actGoal.visual_track_switch, self.actGoal.roi.x)
+                    #res = self.act_client_req(self.actGoal)
+                    
+                              
+               self.visual_track_switch_last = self.motion_detected            # for memory
                
           # Set the flag
           self.visual_cb_flag = True

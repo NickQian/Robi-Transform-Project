@@ -189,6 +189,30 @@ void servoTorqueEnable(uint8_t servoID){
 
 }
 
+void servoTorqueBrake(uint8_t servoID){
+
+         shortPacketWr ->Header = init_Futaba_ShortPacket.Header;
+         shortPacketWr ->ID     = servoID; // 0xFF;                 //!! Any servo connect$
+         shortPacketWr ->Flg    = Flg_WriteServoRAM;
+         shortPacketWr ->Adr    = ADDR_TORQUE_EN;
+         shortPacketWr ->Len    = 0x01;
+         shortPacketWr ->Cnt    = 0x01;
+         shortPacketWr ->Dat[0] = 0x02;             // 1:enable, 0:disable, 2:brake mode
+
+        ///Sum///
+        uint8_t *p = (uint8_t *)shortPacketWr;
+        shortPacketWr->Sum = 0;                      // init the SUM with 0
+        int i;
+        for (i=2; i<(sizeof(Futaba_ShortPacket)-1 -4 + (shortPacketWr->Len)*(shortPacketWr->Len)*(shortPacketWr->Cnt) ); i++){
+                 shortPacketWr->Sum  ^= *( p + i );
+
+        }
+        shortPacketWr ->Dat[0] |= int16_t( (shortPacketWr->Sum) << 8 );
+
+        uart0_WrServoShortPacket( shortPacketWr);
+
+}
+
 
 int servoSetID( int16_t id){
         // Futaba_ShortPacket *shortPacketWr = (Futaba_ShortPacket *) malloc(sizeof( Futaba_ShortPacket));   // C++

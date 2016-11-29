@@ -7,9 +7,9 @@
 #include <stdbool.h>
 
 #include "stt.h"
-#include "./speech/xunfei/onl_tts/include/qisr.h"
-#include "./speech/xunfei/onl_tts/include/msp_cmn.h"
-#include "./speech/xunfei/onl_tts/include/msp_errors.h"
+#include "qisr.h"
+#include "msp_cmn.h"
+#include "msp_errors.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ const char* stt(){
 
    int ret        = MSP_SUCCESS;
    bool rslt_login_1, rslt_login_2, rslt_login_3, rslt_login_4;
-   const char *wavfilename = "./speech/speech.wav";  //speech.wav(mono) micrec.wav   speechIn.wav
+   const char *wavfilename = speech_wav_file;  //speech.wav(mono) micrec.wav   speechIn.wav
    //int upload_on  = 1;   // 1: upload 
    const char *login_params = "appid = 5677c22a, work_dir = ."; //
 

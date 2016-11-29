@@ -1,8 +1,8 @@
 /*
-    ROS action server to handle request from clients "mc.py"  
+    ROS action server to handle request from clients "mc.py"
     ----
-    Licensed under BSD license. 
-    by Nick Qian  
+    Licensed under BSD license.
+    by Nick Qian
     ----
     0.1 - 2016.7.25   init version
     ----
@@ -53,7 +53,7 @@ public:
    void executeCB(const actprocess::servosGoalConstPtr &goal){
        //var
        volatile uint8_t  servoID     = uint8_t(goal->servoID);
-       volatile int16_t  goalPostion = int16_t(goal->goalAngle);
+       volatile int16_t  goalPosition = int16_t(goal->goalAngle);
        volatile uint16_t goalTime    = uint16_t(goal->goalTime);
        int wait_count = 0;
        int result = 0;
@@ -69,15 +69,16 @@ public:
        ///////////// start exe action for Goal //////////////
 
        // servo set
-       result = servoSet(servoID, goalPostion, goalTime);
-       ROS_INFO("%s: servoSet Excuted, goalAngle is %i, goalTime is %i", action_name_.c_str(), goal->goalAngle, goal->goalTime);
+       result = servoSet(servoID, goalPosition, goalTime);
+       ROS_INFO("%s: servoSet Excuted, goalID:%i, goalAngle: %i, goalTime: %i", action_name_.c_str(),
+                                      int(servoID), goalPosition, goalTime);
 
        //getServoReturnDelay(servoID);
        //setServoReturnDelay(servoID, 40);      // 20*50us=1ms. 40 is 2ms. (max=255)
 
        ////////////// inquire feedback ////////////
        while (1){
-                  cout << "====> delay 0.2s, inquire postion again:" << endl;
+                  cout << "====> delay 0.2s, inquire postion again, ID=" << int(servoID) << endl;
                   delay_ms(INTVL_INQ_POSITION);            // 500 = 500 ms
 
                   // publish the feedback
@@ -86,13 +87,15 @@ public:
 
                   as_.publishFeedback(feedback_);
 
-                  if ( ALLOWABLE_DIFF > abs(goalPostion - feedback_.current_position) ){
+                  if ( ALLOWABLE_DIFF > abs(goalPosition - feedback_.current_position) ){
                        cout << "!!!Got it!!!. Will break."  << endl;
+                       servoTorqueBrake(servoID);
                        success = true;
                        break;
                   }
                   else if(MAX_INQ_TIMES == wait_count){
                        cout << "Error: Max Inquiry times exceed. Servo is blocked?" << endl;
+                       servoTorqueBrake(servoID);
                        success = false;
                        break;
                   }

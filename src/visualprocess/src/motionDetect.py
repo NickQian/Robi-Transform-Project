@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 '''
  motion detect using the opencv2 lk. bases on the code in 'rbx1'
- Input: video
- output: track_box, bool motionDetected
-
  -----
  Licensed under BSD license. 
- by Nick Qian  2016-08-27.
+ 0.1 : 2016-08-27 -init by Nick Qian 
+ ----
+ Input: video
+ output: track_box, bool motionDetected
 '''
 
 import rospy
@@ -156,7 +156,7 @@ class motionDetect( ):
                         print ("~~~ Motion detected. motionDetected = True")
                         
                     else:
-                        print ("//// No motion detected. motionDetected = Fasle")                
+                        print ("////// No motion detected. motionDetected = Fasle")                
 
 
                     if self.Vp_ME_UseLkTractor:   # if do Motion Estimation, get key points firstly
@@ -577,7 +577,7 @@ def main():
         md = motionDetect( )
         md.run()
         rospy.spin()
-    except KeyboardInterrupt:
+    except ROSInterruptException, e:    #KeyboardInterrupt:
         print "Shutting down motion detect node."
         cv.destroyAllWindows()
 

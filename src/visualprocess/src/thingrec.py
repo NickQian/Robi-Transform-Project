@@ -1,8 +1,14 @@
 #!/usr/bin/env python
-# thing recognize.       by Nick Qian  2016-05-07.
-# Licensed under BSD license. See the LICENSE file in the root. 
-# input: cam shots
-# output: string
+
+"""
+ Thing recognize bases on tensorflow demo.
+ ----
+ Licensed under BSD license. See the LICENSE file in the root.
+ 0.1:  2016-05-07. init by by Nick Qian
+ ----
+ input: cam shots
+ output: string
+"""
 
 from __future__ import absolute_import
 from __future__ import division

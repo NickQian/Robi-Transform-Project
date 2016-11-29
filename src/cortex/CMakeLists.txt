@@ -164,6 +164,7 @@ catkin_install_python(PROGRAMS
     src/bt_lib.py
     src/pi_trees_lib.py
     src/bt_ros_bridge.py
+    src/pi_trees_ros.py
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/install
 )
 

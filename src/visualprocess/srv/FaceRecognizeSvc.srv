@@ -1,0 +1,6 @@
+#Single Face recognize request
+ 
+string cmd
+box  roi
+---
+string res_faceRecog

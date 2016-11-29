@@ -1,0 +1,6 @@
+# object detection in the roi given
+
+string cmd
+box  roi
+---
+multiBox result_objDetect

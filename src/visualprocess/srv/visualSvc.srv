@@ -1,0 +1,12 @@
+# nmotion_detect & people_detect & faces_detect will performed normally which don't need request
+
+uint8 cmd
+box   roi
+
+uint8 OBJ_DETECT = 1
+uint8 OBJ_RECOG  = 2
+uint8 FACE_RECOG = 3
+
+---
+string result_recog
+multiBox result_boxes

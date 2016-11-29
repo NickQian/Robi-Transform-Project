@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 
+"""
+ face recognize bases on opencv2.4.9.
+ ----
+ Licensed under BSD license. See the LICENSE file in the root.
+ 0.1:  2016-05-07. init by by Nick Qian
+ ----
+ input: cam shots
+ output: string(name of people)
+"""
+
 import os, sys, math
 import cv2
 import cv2.cv as cv

@@ -169,6 +169,7 @@ void uart0_WrServoShortPacket(Futaba_ShortPacket *shortPacketWr);
 //void servoSetTorque(Futaba_ShortPacket *shortPacketWr, int16_t value);
 void servoSetTorque(uint8_t servoID, int16_t value);
 void servoTorqueEnable(uint8_t servoID);
+void servoTorqueBrake(uint8_t servoID);
 int  servoSetID( int16_t id);
 int setServoReturnDelay(uint8_t servoID, uint8_t retDelayValue);
 

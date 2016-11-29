@@ -47,18 +47,22 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
     FILES 
-    visualMsg.msg  
+    visualMsg.msg
+    multiBoxWTag.msg  
     multiBox.msg
+    boxWithTag.msg
     box.msg
 )
 #add_message_files(DIRECTORY msg FILES Message1_VP.msg  Message2_VP.msg )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   VService1_VP.srv
-#   VService2_VP.srv
-# )
+ add_service_files(
+   FILES
+   #ObjDetectSvc.srv
+   #ObjRecognizeSvc.srv
+   #FaceRecognizeSvc.srv
+   visualSvc.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -157,6 +161,7 @@ include_directories(
 # )
 catkin_install_python(PROGRAMS
     src/vp.py
+    src/vp_svc.py
     src/motionDetect.py
     src/facerec.py
     src/thingrec.py

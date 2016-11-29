@@ -1,0 +1,8 @@
+<launch>
+  <node name = "node_motion_detect"   pkg="visualprocess" type="motionDetect.py"  output="screen"/>
+  <node name = "node_cortexp"         pkg="cortex"        type="cortexp.py"       output="screen"/>  
+  <node name = "node_actPattern"      pkg="actprocess"    type="mc.py"            output="screen"/>
+  </node>
+  <node name = "servos"               pkg="actprocess"    type="servos" output="screen"/>
+  </node>
+</launch>

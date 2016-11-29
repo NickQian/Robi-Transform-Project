@@ -6,9 +6,9 @@
 #include <cassert>
 #include <stdint.h>
 
-#include "./speech/xunfei/onl_tts/include/qtts.h"
-#include "./speech/xunfei/onl_tts/include/msp_cmn.h"
-#include "./speech/xunfei/onl_tts/include/msp_errors.h"
+#include "qtts.h"
+#include "msp_cmn.h"
+#include "msp_errors.h"
 
 #include "tts.h"
 
@@ -35,7 +35,7 @@ wav_pcm_hdr init_wav_hdr = {
 
 int tts(const char *text){       //, const char *tts_args
    const char *login_configs = "appid = 5677c22a, work_dir = . ";
-   const char *filename      = "./speech/shout.wav";
+   const char *filename      = shout_wav_file;
    FILE *fp                  = NULL;
    const char *sessionID     = NULL;
    uint32_t audio_len        = 0;
@@ -96,12 +96,14 @@ int tts(const char *text){       //, const char *tts_args
    //////// Write WAV head to file, Collect could Data and add to wav /////////////
    fwrite(&wav_hdr, sizeof(wav_hdr), 1, fp);
 
+cout << "UUUU" << flush;
+
    while(1){
     const void* data = QTTSAudioGet(sessionID, &audio_len, &synth_status, &ret); // QTTSAudioGet
     if (MSP_SUCCESS != ret)
        break;
 
-    cout << "." << flush;
+    cout << ":" << flush;
 
     if (NULL != data){       //write data to fp
        fwrite(data, audio_len, 1, fp);

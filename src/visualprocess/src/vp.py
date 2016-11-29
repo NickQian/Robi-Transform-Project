@@ -1,6 +1,17 @@
 #!/usr/bin/env python
-# top file of video process (board) -2015.11.23
-#  
+
+"""
+ top file of video process (board). Issues tpc_visual messages & work as obj/face recognize service
+ ----
+  Licensed under BSD license.
+  0.2: move 
+  0.1: 2015.11.23 init version by Nick Qian
+ ----
+ Input: video, cmd(serviceProxy) from cortexn
+ Output: tpc_visual info, object recognize service result
+
+"""
+
 import os, sys
 
 import rospy
@@ -9,26 +20,74 @@ from std_msgs.msg import String
 from facerec import createCsv, modelTrain, detectFaces, facesRecog
 from thingrec import thingRec
 #from cortexp import peopleAround, animalAround, plantAround, env
+from visualprocess.msg import visualMsg
+#from visualprocess.srv import ObjRecognizeSrv
+from visualprocess.srv import visualSvc, visualSvcRequest, visualSvcResponse
 
-class camera:
+from motionDetect import motionDetect
+import facerec
+import thingrec
+
+
+class vp(object):
+    def __init__(self):
+        self.cam_cmos = camera_cmos()
+        rospy.init_node('node_vp', anonymous=True)
+        
+
+    def launch(self):
+        
+        try:
+            self.cam_cmos.launch()
+            rospy.spin()
+            
+        except rospy.exceptions.ROSInterruptException, e:
+            print ("!!!!! :" ,e)
+      
+        
+        
+
+class camera_tof():   # Initiative(such as TOF camera)
+    pass
+    
+    
+
+class camera_cmos(object):   # Passive(such as cmos camera)
     def __init__(self):
         self.cvFaceDataFolder = '/home/pi/Pictures/peopleInMem/'
         self.CsvFile = self.cvFaceDataFolder  + 'csv.txt'
-        rospy.init_node('node_vp', anonymous=True)                          # rospy will choose a unique name for node_vp
-        self.cmd_brain            = 'Run'                                                                # casual pause  stop
-        self.objPositions        = [ ]
-        self.objRecog             = [ ]                                     # [ (563, 'Dunge crab, king crab'),(106, 'rock crab, Alaska crab') ]
+
+        #self.objRecogSrvc = rospy.Service('srvc_objRecog', ObjRecognizeSrv, self.handle_objRecog)
+        
+         
+        self.cmd_brain       = 'Run'                                                                # casual pause  stop
+        self.objPositions    = [ ]
+        self.objRecog        = [ ]                                     # [ (563, 'Dunge crab, king crab'),(106, 'rock crab, Alaska crab') ]
         self.peoplePositions = [ ]
-        self.peopleRecog      = [ ]                                      #
-        self.myView               = [self.objPositions, self.objRecog, self.peoplePositions, self.peopleRecog]                 # self.plant, self.animals
-        #self.envir                  = ''
-        self.ooi                        = True #(False, 0)                    # "is object of interest?"
-        self.poi                        = True #(False, 0)                    # "is people of interest?"                
+        self.peopleRecog     = [ ]                                      #
+        self.myView          = [self.objPositions, self.objRecog, self.peoplePositions, self.peopleRecog]                 # self.plant, self.animals
+        #self.envir          = ''
+        self.ooi             = True #(False, 0)                    # "is object of interest?"
+        self.poi             = True #(False, 0)                    # "is people of interest?"
+        
         createCsv( self.cvFaceDataFolder )
         modelPeople = modelTrain( self.cvFaceDataFolder )
         
+        self.MotionDetect = motionDetect( )
+        
     def launch(self):
-        while True:
+        while not rospy.is_shutdown( ):
+            try:
+                self.MotionDetect.run()
+                rospy.spin()
+                
+            except ROSInterruptException, e:
+                print ("!!!!!!! :" ,e)
+
+
+
+            
+        """
             if self.cmd_brain == 'stop':
                 print ('Info: Got command from brain:', self.cmd_brain)
                 break
@@ -51,11 +110,16 @@ class camera:
                     self.pubPeoplePositions( )
                 else:
                     self.peopleRecog = facesRecog(imagePIL, faces_rects)
-                    self.pubPeopleRecogInfo( )       
+                    self.pubPeopleRecogInfo( )
+        """
                           
 
     def pubObjPositions(self):
         self.vp2brain(self.objPositions)
+
+    def handle_objRecog(req):
+        if req.en_recognize == True:
+            (req.roi)
 
     def pubObjRecogInfo(self):
         self.vp2brain(self.objRecog)
@@ -100,19 +164,27 @@ class camera:
         else:
             return nameOfPerson
 
+        
 
-
-if __name__ ==  '__main__':
-    eyeL = camera(  )
-    eyeR = camera( )
+def main():
+    
     try:
-        eyeL.launch(  )
-        #eyeL.vp2node( )
-    except rospy.ROSInterruptException:
-        print ('Error: ROSInterruptException')
+        vprocess = vp( )
+        vprocess.launch( )
+        
+    except rospy.ROSInterruptException, e:
+        print ('!!!! ROSInterruptException', e)
     except KeyboardInterrupt, e:
         print ('Exiting by keyboard interrupt...')
-    print 'Exit Done.'
+    else:
+        print '<vp> node is Done!'
+
+
+ 
+
+if __name__ ==  '__main__':
+
+    main()
     
 
 

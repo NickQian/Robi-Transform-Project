@@ -1,3 +1,6 @@
+
+# Only handle big robot action. Small actions are handled by "actPattern" directly
+
 #goal
 uint8 walk_to
 

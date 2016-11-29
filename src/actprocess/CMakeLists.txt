@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   genmsg
   message_generation
+  geometry_msgs
   actionlib_msgs
   actionlib
 )
@@ -65,12 +66,15 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    servos.action
    actPattern.action
+   charge.action
+   move.action
  )
 
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
    std_msgs
+   geometry_msgs
    actionlib_msgs
  )
 
@@ -106,7 +110,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES servoslib
-  CATKIN_DEPENDS message_runtime actionlib_msgs roscpp rospy std_msgs
+  CATKIN_DEPENDS message_runtime actionlib_msgs roscpp rospy std_msgs geometry_msgs
   DEPENDS system_lib
 )
 
@@ -122,6 +126,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+#-----------------------
 ## Declare a C++ library
 add_library(
    servoslib
@@ -132,27 +137,29 @@ add_library(
  )
 
 ## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
+## as an example, code may need to be generated before libraries either from message generation or dynamic reconfigure
+
 # add_dependencies(actprocess ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+#--------------------------
 ## Declare a C++ executable
 add_executable(servos src/servos.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(
-    servoslib
-    ${${PROJECT_NAME}_EXPORTED_TARGETS} 
-    ${catkin_EXPORTED_TARGETS}
-)
+#add_dependencies(
+#    servoslib
+#    ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+#    ${catkin_EXPORTED_TARGETS}
+#)
 
+#----------link------------
 ## Specify libraries to link a library or executable target against
 target_link_libraries(
    servos
    servoslib
    ${catkin_LIBRARIES}
- )
+)
 
 #############
 ## Install ##

@@ -7,7 +7,11 @@ project(audioprocess)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
-  std_msgs
+  #std_msgs
+  genmsg
+  message_generation
+  actionlib_msgs
+  actionlib
 )
 
 ## System dependencies are found with CMake's conventions
@@ -44,11 +48,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
+ add_message_files(
+   FILES
+   soundMsg.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -58,17 +62,18 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
+ add_action_files(
+   FILES
+   mouth.action
 #   Action2.action
-# )
+ )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+   actionlib_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -95,38 +100,63 @@ find_package(catkin REQUIRED COMPONENTS
 ###################################
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
-## INCLUDE_DIRS: uncomment this if you package contains header files
-## LIBRARIES: libraries you create in this project that dependent projects also need
-## CATKIN_DEPENDS: catkin_packages dependent projects also need
-## DEPENDS: system dependencies of this project that dependent projects also need
+## INCLUDE_DIRS: exported include paths for the package. uncomment this if you package contains header files
+## LIBRARIES: exported libraries from this project. libraries you create in this project that dependent projects also need
+## CATKIN_DEPENDS: other catkin projects that this project depends on. catkin_packages dependent projects also need
+## DEPENDS: Non-catkin Cmake projects that this project depends on.system dependencies of this project that dependent projects also need
+
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES audioprocess
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES audioInIFlib
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime actionlib_msgs
+  DEPENDS system_lib
 )
 
 ###########
 ## Build ##
 ###########
+#example: add_executable(talker src/talker.cpp)
+#         target_link_libraries(talker ${catkin_LIBRARIES})
+#         add_dependencies(talker beginner_tutorias_generate_messages)
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
 include_directories(
+  include
+  /home/pi/toby_ws/external_src/xunfei/onl_tts/include
+  /usr/include/python2.7
   ${catkin_INCLUDE_DIRS}
 )
 
+link_directories(
+   /home/pi/toby_ws/external_src/xunfei/onl_tts/libs/RaspberryPi/
+   /usr/lib/python2.7/
+)
+#------------------------
 ## Declare a C++ library
-# add_library(audioprocess
-#   src/${PROJECT_NAME}/audioprocess.cpp
-# )
+# 
+add_library(
+  audioInIFlib
+#  src/${PROJECT_NAME}/audioprocess.cpp
+  src/audioInIF.cpp
+  src/mic.cpp
+  src/stt.cpp
+  src/tts.cpp
+)
 
-## Add cmake target dependencies of the library
+## Add cmake target dependencies of the library. (Nick: for msg generation mainly?)
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(audioprocess ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#add_dependencies(
+#  audioInIFlib
+#  msc
+#  ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+#  ${catkin_EXPORTED_TARGETS}
+#)
 
+
+#--------------------------
 ## Declare a C++ executable
 # add_executable(audioprocess_node src/audioprocess_node.cpp)
 
@@ -134,10 +164,19 @@ include_directories(
 ## same as for the library above
 # add_dependencies(audioprocess_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+#--------------------------link------------------------------------
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(audioprocess_node
-#   ${catkin_LIBRARIES}
-# )
+# Example: add_excutable(foo  src/foo.cpp)
+#          add_library(moo src/moo.cpp)
+#          target_link_libraries(foo moo)  -- links foo against libmoo.so
+
+
+target_link_libraries(
+   audioInIFlib
+   asound
+   msc
+   ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
@@ -148,24 +187,25 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# install(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/install
-# )
+catkin_install_python(PROGRAMS
+   src/ap_i.py
+   src/ap_o.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/install
+ )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS audioprocess audioprocess_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS audioInIFlib      #audioprocess audioprocess_node
+   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/install     #${CATKIN_PACKAGE_LIB_DESTINATION}
+   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
+install(DIRECTORY include/${PROJECT_NAME}/
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+   FILES_MATCHING PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
-# )
+ )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES

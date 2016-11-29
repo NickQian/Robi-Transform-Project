@@ -6,8 +6,8 @@ uint8  op                  # 1: pattern operation   2: elaborate operation  3: m
 uint8  pattern             # 0: null, 1: visual track, 2: talk gestures, 3:emotion lan  4: leg move, 5.combination 6.follow item
 bool   visual_track_switch # switch
 box    roi
-uint8  talk_gesture        # 0: null, 1:boring, 2:hello, 3:bye, 4:yes_1, 5:no_1
-uint8  emotion_type        #
+string  talk_gesture        # 0: null, 1:boring, 2:hello, 3:bye, 4:yes_1, 5:no_1
+string  emotion_type        #
 
 #for elaborate operation: 
 string bodyID              # arm_L/forearm_L/arm_R/forearm_R/shoulder_L/shoulder_R/elbow_L/elbow_R/knee_L/knee_R/head_H/leg_L/leg_R
@@ -22,10 +22,10 @@ uint8  TALK_GESTURE         = 2
 uint8  EMOTION_LANG         = 3
 uint8  LEG_MOVE             = 4
 uint8  COMBINATION_PTN      = 5
-uint8  TG_BORING            = 1
-uint8  TG_HELLO             = 2
-uint8  TG_BYE               = 3
-uint8  EMO_XI_LU_AI_LE_AI_WU_JU = 4
+#uint8  TG_BORING            = 1
+#uint8  TG_HELLO             = 2
+#uint8  TG_BYE               = 3
+#uint8  EMO_XI_LU_AI_LE_AI_WU_JU = 4
 
 
 ---

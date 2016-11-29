@@ -1,0 +1,17 @@
+# goal
+
+uint8  goal_ChargeRobot
+
+---
+# result
+uint8 result
+
+uint8  PENDING   = 0
+uint8  ACTIVE    = 1
+uint8  PREEMPTED = 2
+uint8  ABORTED   = 3
+uint8  ABORTED   = 4
+
+---
+#feedback
+uint8 progress               # xx%

@@ -1,0 +1,6 @@
+#single object recognization
+ 
+string cmd
+box  roi
+---
+string result_objRecog

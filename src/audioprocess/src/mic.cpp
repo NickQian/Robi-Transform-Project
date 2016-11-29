@@ -1,3 +1,14 @@
+/*
+  mic driver & audio event detect & record. Sample 500ms every time
+  ----
+  Licensed under BSD license.
+  0.2 - 2016.10.30  Integrate into ros & change work period to 500ms
+  0.1 - 2016.1.26 by Nick Qian
+  ----
+  Output: wav record file & event flag
+  Input: sound
+*/
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <iostream>
@@ -7,11 +18,9 @@
 //#include <linux/i2c-dev.h>
 #include <alsa/asoundlib.h>   // use API
 #include <sys/soundcard.h>
-//#include <csignal>
 
 using namespace std;
 
-#include "peri.h"
 #include "mic.h"
 #include "audio_cmn.h"
 
@@ -22,15 +31,15 @@ wav_pcm_hdr init_wav_speech_hdr = {       //values same as TTS
    {'f','m','t',' '},
    16,
 
-   1,       //pcm
-   2,       //channel = 2
-   16000,   // 16KHz sample
-   64000,   // 16KHz * 2CH * 2bytes = 32000 byte data/second
-   2,       // 2 byte /sample
-   16,      // sample depth
+   1,                    // pcm
+   2,                    // channel = 2
+   16000,                // 16KHz sample
+   64000,                // 16KHz * 2CH * 2bytes = 32000 byte data/second
+   2,                    // 2 byte /sample
+   16,                   // sample depth
 
    {'d','a','t','a'},
-   0         // data size
+   0                     // data size
 };
 
 /*
@@ -40,218 +49,323 @@ return 0;
 
 }*/
 
-//static int micInStatus    = SND_IDLE;
 
-int micStartListen( ){
+static snd_pcm_t *handle;
+static int SoundScanEvtInd  = SCAN_FLG_NULL;
+static unsigned int val;
+static snd_pcm_uframes_t frames;
+static wav_pcm_hdr wav_hdr =  init_wav_speech_hdr;
+
+
+int initAlsaMicrophone(){
+    int ret = 0;
     int rc;
-    int ret = 0;              //report get speech and rec done
-    int loops;
-    int evd_res;              // event detect result 
-    int cnt_dbg, cnt_loop;
-    int size;
-    wav_pcm_hdr  wav_hdr =  init_wav_speech_hdr;
-    FILE *fp = NULL;
-    const char *filename = "./speech/micrec.wav";  //micrec.wav";  // speech.wav
-    snd_pcm_t *handle;
-    snd_pcm_hw_params_t *params;
-    unsigned int val;
+    //wav_pcm_hdr  wav_hdr =  init_wav_speech_hdr;
     int dir;
-    snd_pcm_uframes_t frames;
-    char *buffer;
+    snd_pcm_hw_params_t *params;
 
 
-    fp = fopen(filename, "wb");
-    assert(NULL != fp);
+    cout << "Info: Initializing Alsa Microphone..." << ends;
 
     rc = snd_pcm_open(&handle,
                      "hw:1,0",    //"default",
                      SND_PCM_STREAM_CAPTURE, 
                      0);
-   // <pre name = "code"  class = "programlisting">  
     if(rc <0 ){
        cout << "ERROR: unable to open PCM device:" << snd_strerror(rc) << endl;
        exit(1);
     }
 
     snd_pcm_hw_params_alloca(&params);       // Allocate a hardware parameters object
-    snd_pcm_hw_params_any(handle, params);   // fill with default values
+    snd_pcm_hw_params_any(handle, params);   // fill parameters object with default values & pass the PCM handle
 
     //////////// set desired HW params:////////////////
-
     snd_pcm_hw_params_set_access(handle, params, SND_PCM_ACCESS_RW_INTERLEAVED);  //Interleaved
     snd_pcm_hw_params_set_format(handle, params, SND_PCM_FORMAT_S16_LE); //signed 16bit little-endian
     snd_pcm_hw_params_set_channels(handle, params, 2);   // 2 channels(stereo)
-
     val = wav_hdr.samples_per_sec;     //16000; //44100;    // 44100 sample rate
     snd_pcm_hw_params_set_rate_near(handle, params, &val, &dir);
 
     frames = 32;            //period size = 32 frames
     snd_pcm_hw_params_set_period_size_near(handle, params, &frames, &dir);
 
-    /////// write to the driver
+    /////// write parames to HW
     rc = snd_pcm_hw_params(handle, params);
     if (rc < 0){
        fprintf(stderr, "unable to set hw parameters: %s\n", snd_strerror(rc) );
        exit(1);
     }
 
-    ///////make buffer to hold one period
-    snd_pcm_hw_params_get_period_size(params, &frames, &dir);
-    size = frames * 4;   // 2byte/sample, 2 channels
-    buffer = (char*)malloc(size);
+    cout << "Done."  << endl;
 
+    cout << "~~~val before extract= " << val << endl;
+    snd_pcm_hw_params_get_period_size(params, &frames, &dir);
+    cout << "~~~frames after extract= " << frames << endl;
 
     ////get period time, set loop period//////
     snd_pcm_hw_params_get_period_time(params, &val, &dir);
-    loops = 40000000 / val; //test 5000ms
+    cout << "~~~val after extract= " << val << endl;
 
-    ////// write wav head & add rec data /////////
-    fwrite (&wav_hdr, sizeof(wav_hdr), 1, fp);          //init head, will change later
- 
+    return ret;
+
+}
+
+int mop_Up_Mic(){
+   int ret = 1;
+
+   cout << "Info:mop up work of mic.cpp..." << ends;
+   //fclose(fp);
+   //fp = NULL;
+   snd_pcm_drain(handle);    // ?
+   snd_pcm_close(handle);
+   ret = 0;
+   cout << "End." << endl;
+
+   return ret;
+}
+
+int micStartListen( ){
+    int ret = 0;              //report get speech and rec done
+    int loops;
+    int cnt_dbg, cnt_loop;
+    int size;
+    //wav_pcm_hdr  wav_hdr =  init_wav_speech_hdr;
+    char *buffer;
+    const char *filename = record_wav_file;
+    int rc;
+    FILE *fp = NULL;
+
+    ///////make buffer to hold one period ???
+    size = frames * 4;   // 2byte/sample, 2 channels
+    buffer = (char*)malloc(size);
+
+    loops = SCAN_INTERVAL*1000 / val; //test 500ms=> 500 000
+
+    // set the default flag for ros node scan every wakeup
+    if (SCAN_FLG_EVT_END==SoundScanEvtInd){
+        SoundScanEvtInd = SCAN_FLG_BLANK;
+        wav_hdr.data_size = 0;
+        snd_pcm_prepare(handle);     // ?
+        //snd_pcm_reset(handle);     // reset PCM position
+    }
+
     cnt_loop = 0;
 
-    int micInEvtInd    = MIC_IDLE;   //MIC_EVT_INIT
-    int silTick        = 0;
+    int micInEvtInd    = MIC_IDLE;
+    if (SCAN_FLG_EVT_DURING==SoundScanEvtInd){
+        micInEvtInd = MIC_SND_DURING;
+        fp = fopen(filename, "ab+");    //ab+  rb+
+        //fseek(fp, 0, SEEK_END);
+        cout << "Info:file opened & fseek to:"<< ftell(fp) << endl;
+    }
+    else{
+         fp = fopen(filename, "wb");
+         assert(NULL != fp);
+         cout << "Info: file opened as <wb>.fp position:"<< ftell(fp) << endl;
+    }
+    int silTick    = 0;
 
     while (loops > 0){
-   //while(MIC_EVT_IDLE_== micInEvtInd){
-     loops--;
+       //while(MIC_EVT_IDLE_== micInEvtInd){
+       loops--;
 
-     rc = snd_pcm_readi(handle, buffer, frames);   // snd_pcm_t *pcm, void *buffer, snd_pcm_uframes_t size
-
-     if (-EPIPE == rc){   // overrun
-         fprintf(stderr, "overrun occurred\n");
-         snd_pcm_prepare(handle);     // ?
-     } else if (rc < 0){
-        fprintf(stderr, "error from read: %s\n", snd_strerror(rc) );
-     } else if (rc != (int)frames ){
-         cnt_dbg++;
-         if (cnt_dbg < 6)
-             fprintf(stderr, "Info: snd_pcm_readi(): rc!= frames. short read, read %d frames \n", rc);
-         else
-             fprintf(stderr, "Info: snd_pcm_readi(): Too many short read, will not reort more. %d frames \n", rc);
-     }
-
-
-    //-------search for sound. process 1 period every > --------
-    int buffer_flg = BUF_FLG_BLANK;
+       rc = snd_pcm_readi(handle, buffer, frames);   // snd_pcm_t *pcm, void *buffer, snd_pcm_uframes_t size
+       if (-EPIPE == rc){   // overrun
+           snd_pcm_prepare(handle);     // ?
+           fprintf(stderr, "overrun occurred. prepared again.\n");
+       }
+       else if (rc < 0){
+          fprintf(stderr, "error from read: %s\n", snd_strerror(rc) );
+       }
+       else if (rc != (int)frames ){
+            cnt_dbg++;
+            if (cnt_dbg < 6)
+                fprintf(stderr, "Info: snd_pcm_readi(): rc!= frames. short read, read %d frames \n", rc);
+            else
+                fprintf(stderr, "Info: snd_pcm_readi(): Too many short read, will not reort more. %d frames \n", rc);
+       }
 
 
-    char *ptr_detected  = buffer;   // every loop the buffer, reset the ptr
-    char *ptr_curdetect = buffer;
+       //-------search for sound. process 1 period every > --------
+       int buffer_flg = BUF_FLG_BLANK;
+       char *ptr_detected  = buffer;   // every loop the buffer, reset the ptr
+       char *ptr_curdetect = buffer;
 
-     for (int i = 0; i< ( (int)frames/NUM_AVG_SMPLE );  i++){
 
-        eventDetect(&micInEvtInd, &silTick, ptr_curdetect);
+       for (int i = 0; i< ( (int)frames/NUM_AVG_SMPLE );  i++){
 
-        ptr_curdetect +=  4*NUM_AVG_SMPLE ;//2 channel, 16bit
+           eventDetect(&micInEvtInd, &silTick, ptr_curdetect);
 
-        // cout << micInEvtInd << ends;
-        if ( MIC_DETECT_IN == micInEvtInd ){
-            cout << "(O|)"<< ends;
-            cout << "Bingo! get sound."  << ends;
+           ptr_curdetect +=  4*NUM_AVG_SMPLE ;//2 channel, 16bit
 
-            buffer_flg = BUF_FLG_FI ;
-            ptr_detected = ptr_curdetect - (NUM_AVG_SMPLE * 4);    //record position
-            // break;                           // stop analyze this period
+           // cout << micInEvtInd << ends;
+           if ( MIC_DETECT_IN == micInEvtInd ){
+               cout << "(o|o)Bingo! get sound.(o|o)"  << ends;
+
+               // set the flag for ros node process
+               SoundScanEvtInd = SCAN_FLG_EVT_DURING;
+
+               // init data_size
+               wav_hdr.data_size = 0;
+
+               buffer_flg = BUF_FLG_FI ;
+               //ptr_detected = ptr_curdetect - (NUM_AVG_SMPLE * 4);    //record position
+               ptr_detected = ptr_curdetect;    //record position
+
+               // open file
+               //cout <<"!will open file>" << flush;
+               //fp = fopen(filename, "wb");
+               //assert(NULL != fp);
+               //cout << "Info: file opened to record." << endl;
+
+           }
+
+           if (MIC_DETECT_FS == micInEvtInd) {
+              cout << "[-->__] Ahhaa! silence."<< ends;
+
+              // set the flag for ros node process
+              SoundScanEvtInd = SCAN_FLG_EVT_END;
+
+              buffer_flg = BUF_FLG_FO;
+              ptr_detected = ptr_curdetect;
+           }
+
+         }  // end for(analyzed the buff)
+
+        ///////////////// End Once Analyze ///////////////
+
+        ////////// flag the buffer ///////////
+        if ( MIC_IDLE == micInEvtInd ){
+           if  (ptr_detected == buffer) {
+               buffer_flg = BUF_FLG_BLANK;
+              // if (NUM_PRINT_GAP == cnt_loop)
+               if (cnt_loop == 150){
+                    cnt_loop = 0 ;
+                    cout << "(o)" << flush;
+               }
+               else{
+                    cnt_loop++;
+               }
+           }
+         }   // end if
+
+
+        if (MIC_SND_DURING == micInEvtInd ){
+           if (ptr_detected != buffer) {   //
+               buffer_flg = BUF_FLG_FI;
+               //if (NUM_PRINT_GAP == cnt_loop)
+               cout << "##" << flush ;
+           }
+           else{
+              buffer_flg = BUF_FLG_DURING_FULL;
+              cout << "|" << flush;
+           }
         }
 
-        if (MIC_DETECT_FS == micInEvtInd) {
-           cout << "(|O) Ahhhaa! find a silence."<< ends;
 
-           buffer_flg = BUF_FLG_FO ;
-           ptr_detected = ptr_curdetect; 
+       //////////// write 1 period/buffer to output ////////////////
+       //compute the audio length
+       // no buffer contains both FI and FO because the gap is longer than buffer 
 
-        }
+       int audio_len;
+       char *ptr_wr_fadeIn  = ptr_detected-(NUM_AVG_SMPLE * 4);   // every loop the buffer, reset the ptr
 
-      }  // end for(analyzed the buff)
+       if ( BUF_FLG_FI == buffer_flg){
+          // audio_len = (size - (int)(ptr_detected - buffer) );
+          audio_len = (size - (int)(ptr_wr_fadeIn - buffer) );
+          cout << "+@@+" << flush;
 
-     ///////////////// End Once Analyze ///////////////
+          ///////// write wav head & add rec data /////////
+          fwrite (&wav_hdr, sizeof(wav_hdr), 1, fp);          //init head, will change later
 
-     if ( MIC_IDLE == micInEvtInd ){
-        if  (ptr_detected == buffer) {
-            buffer_flg = BUF_FLG_BLANK;
-           // if (NUM_PRINT_GAP == cnt_loop) 
-            if (cnt_loop == 150){
-                 cnt_loop = 0 ;
-                 cout << "(o)" << flush;
-            }
-            else{
-                 cnt_loop++;
-            }
-        } 
-      }
+          ///////// write Fade In sound data ///////////
+          /*
+          if (WR_FADEIN_OFFSET >= ptr_detected - buffer){
+               ptr_wr_fadeIn = buffer;
+               offset_fadeIn = (int)(ptr_detected - buffer);
+          }
+          else{
+               ptr_wr_fadeIn = ptr_detected - WR_FADEIN_OFFSET;
+               offset_fadeIn = WR_FADEIN_OFFSET;
+          }
+          fwrite(ptr_wr_fadeIn, audio_len+offset_fadeIn, 1, fp);
 
-     if (MIC_SND_DURING == micInEvtInd ){
-        if (ptr_detected == buffer) {
-            buffer_flg = BUF_FLG_FULL;
-            //if (NUM_PRINT_GAP == cnt_loop)
-            cout << "|" ;
-        }
-    }
-
-    //////////// write 1 period/buffer to output ////////////////
-    //compute the audio length
-    // no buffer contains both FI and FO because the gap is longer than buffer 
-    int audio_len;
-
-    if ( BUF_FLG_FI == buffer_flg){
-       audio_len = (size - (int)(ptr_detected - buffer) );
-       fwrite(ptr_detected, audio_len, 1, fp);
-
-       wav_hdr.data_size += audio_len;
-
-       cout << "[@@@@" <<  audio_len << "@@@@]" << ends;
-    }
-
-    if( BUF_FLG_FULL == buffer_flg){
-          audio_len = size;
-//          cout << "[" << audio_len << "]" << ends;
-          fwrite(ptr_detected, audio_len, 1, fp);
+          wav_hdr.data_size += audio_len+offset_fadeIn;
+          */
+          fwrite(ptr_wr_fadeIn, audio_len, 1, fp);
           wav_hdr.data_size += audio_len;
-    }
+
+          //cout << "@audio_len is:" <<  audio_len << "@" << ends;
+       }
+
+       if( BUF_FLG_DURING_FULL == buffer_flg){
+
+          audio_len = size;
+          fwrite(ptr_detected, audio_len, 1, fp);
+          cout << ":" << flush;
+
+          wav_hdr.data_size += audio_len;
+
+          // set the flag for ros node process
+          SoundScanEvtInd = SCAN_FLG_EVT_DURING;
+        }
 
 
-    // DETECT Fade out(Find Silence) == micInEvtInd
-    if (BUF_FLG_FO == buffer_flg){
-       audio_len = (int)(ptr_detected - buffer);
-       cout << "==-->Fadeout, last data write to file.audio_len is :" << audio_len << endl;
+       // DETECT Fade out(Find Silence) == micInEvtInd
+       if (BUF_FLG_FO == buffer_flg){
+          audio_len = (int)(ptr_detected - buffer);
+          cout << "==-->Fadeout, write last. audio_len is :" << audio_len << endl;
 
-       fwrite(buffer, audio_len, 1, fp);
-       wav_hdr.data_size += audio_len;
+          fwrite(buffer, audio_len, 1, fp);
+          wav_hdr.data_size += audio_len;
+          ///////End of data write////////
 
-       ///////End of write////////
-       // write back to wav head
-       cout << "$collect head info and write head. data_size is:" << wav_hdr.data_size  << endl;
-       wav_hdr.size_8 += wav_hdr.data_size + (sizeof(wav_hdr) - 8);
-       fseek(fp, 4, 0);
-       fwrite( &wav_hdr.size_8, sizeof(wav_hdr.size_8), 1, fp);            //size_8
-       fseek(fp, 40, 0);          // data_size
-       fwrite(&wav_hdr.data_size, sizeof(wav_hdr.data_size), 1, fp);       //data_size
-       fclose(fp);
-       fp = NULL;
+          // write back to wav head
+          fclose(fp);
+          fp = fopen(filename, "rb+"); // reopen to reallocate the fp to file head
+cout <<"<reopen fp>:" << ftell(fp) << flush;
 
-       ret = 1;
-       goto exit;             // end the loop
-      }
 
-     // if(rc != size){
-     //    fprintf(stderr, "shot write: wrote %d bytes\n", rc);
-     // }
+          wav_hdr.size_8 += wav_hdr.data_size + (sizeof(wav_hdr) - 8);
+          fseek(fp, 4, 0); // offset, from where
+cout <<"<size_8 fp>:" << ftell(fp) << flush;
+          fwrite( &wav_hdr.size_8, sizeof(wav_hdr.size_8), 1, fp);            //size_8
+          fseek(fp, 40, 0);          // data_size
+cout <<"<data_size fp>:" << ftell(fp) << flush;
 
-   } // while
+          fwrite(&wav_hdr.data_size, sizeof(wav_hdr.data_size), 1, fp);
+
+          cout << "+&&+. data_size is:" << wav_hdr.data_size << ". size_8 is:" << wav_hdr.size_8 << endl;
+
+          // close file & release file ptr
+          //fclose(fp);
+          //fp = NULL;
+          //cout << "Info:file closed" << endl;
+
+          // set the flag for ros node process
+          SoundScanEvtInd = SCAN_FLG_EVT_END;
+
+          ret = 1;
+          goto exit;             // end 1 loop
+         }
+
+         // if(rc != size){
+         //    fprintf(stderr, "shot write: wrote %d bytes\n", rc);
+         // }
+
+   } // end while
 
 
 exit:
-   snd_pcm_drain(handle);
-   snd_pcm_close(handle);
-   free(buffer); 
+   // close file & release file ptr
+   fclose(fp);
+   fp = NULL;
+   free(buffer);
+   cout << "Info:file closed & buffer released." << endl;
 
+//return ret;
+  return SoundScanEvtInd;   //micInEvtInd;
 
-   cout << "Info:End. free the buffer" << endl;
-
-
-return ret;
 }
 
 
@@ -267,7 +381,7 @@ int eventDetect(int *sndEvtInd, int *silTick, char *sndBufIn){         // &micIn
 
       if (MIC_DETECT_IN == *sndEvtInd ){
            *sndEvtInd = MIC_SND_DURING;
-           cout << *sndEvtInd;
+           cout << *sndEvtInd << flush;
       }
 
 
@@ -299,14 +413,14 @@ int eventDetect(int *sndEvtInd, int *silTick, char *sndBufIn){         // &micIn
            else {
               *sndEvtInd = MIC_DETECT_FS;
               *silTick = 0;
-              cout << *sndEvtInd ;
+              cout << *sndEvtInd << flush;
            } // silTick ==  NUM_SILENCE_TKL
          } // < threshold
 
         if (*silTick > 0){
            if ( abs(volmAvg) > GATE_THRESHOLD ){
                 *silTick = 0;
-                cout << "V";
+                cout << "V" <<flush;
            }
         }   //if has tick
 
