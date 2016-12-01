@@ -26,6 +26,6 @@ Raspberry Pi3B + Xunfei XFM10211(USB port) + Robi   <br/>
 4.a) When speaking the microphone also capture the sound and record it. This is stupid. Need a way to improve this.  <br/>
 4.b) STT and TTS are not good. STT using Xunfei cloud and too slow. TTS result is not smooth. Needs better solution.  <br/>
 4.c) integrate "syntaxnet" to do some analyze?   <br/>
-4.d) dialog match now using AIML. need to imporove using CNN things.  <br/>
+4.d) dialog match now using AIML. need to imporove using RNN/LSTM things???  <br/>
 
 
