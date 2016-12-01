@@ -1,7 +1,7 @@
-# HW setup & TODO:  <br/>
+# HW Setup & TODO:  <br/>
 
 1. HW list:   <br/>
-Raspberry Pi3 + Xunfei XFM10211(USB port) + Robi   <br/>
+Raspberry Pi3B + Xunfei XFM10211(USB port) + Robi   <br/>
 
 2. Steps <br/>
 1) connect robi servo's 'CTRL'(or 'Signal') together and tight them to Pi3's GPIO pin 8&9(TXD0&RXD0). Connect the GND of servo and Pi3.<br/>
@@ -16,11 +16,16 @@ Raspberry Pi3 + Xunfei XFM10211(USB port) + Robi   <br/>
 2016.11.29 <br/>
 
 3. TODO:  <br/>
-1) servo action server now only support 1 servo command during server period. Need to support all servo at the same time. <br/>
-2) sensors now are blank (except microphone and camera). Need to add sensors driver and integrate them into ROS to let them publish data. <br/>
-3) Robi cannot move right now. need to add a balance car under the legs and let them move: controlled by BT.  <br/>
-4) When speaking the microphone and capture the sound and record it. This is stupid. Need a way to improve this.  <br/>
-5) STT and TTS are not good. STT using Xunfei cloud and too slow. TTS result is not smooth. Needs better solution.  <br/>
-6) No object detection right now. Maybe tensor box is a solution. Object recognization using inception has not been integrated into ROS. also face recognization. <br/>
-7) dialog match now using AIML. need to imporove using CNN things.  <br/>
+1.a) servo action server now only support 1 servo command during server period. Need to support all servo at the same time. <br/>
+1.b) Robi cannot move right now. need to add a balance car under the legs and let them move: controlled by BT.  <br/>
+1.c) integrate moveit! ? <br/>
+2.a) sensors now are blank (except microphone and camera). Need to add sensors driver and integrate them into ROS to let them publish data. <br/>
+2.b) integrate cartographer for SLAM <br/>
+3.a) No object detection right now. Maybe "tensorbox" is a solution.  <br/>
+3.b) Object recognization using "inception" has not been integrated into ROS. also face recognization. <br/>
+4.a) When speaking the microphone also capture the sound and record it. This is stupid. Need a way to improve this.  <br/>
+4.b) STT and TTS are not good. STT using Xunfei cloud and too slow. TTS result is not smooth. Needs better solution.  <br/>
+4.c) integrate "syntaxnet" to do some analyze?   <br/>
+4.d) dialog match now using AIML. need to imporove using CNN things.  <br/>
+
 
