@@ -33,6 +33,6 @@ designed by the 'strange' professor&CEO(ROBOGARAGE.Co.,Ltd) Tomotaka Takahashi  
 Hardware & debug progress: http://blog.csdn.net/zister <br/>
 2015.12.12 <br/>
 -------------------------------------------------------------------------------------------------------------------------<br/>
-contact the initiator: 729480514@qq.com (w-e-c-h-a-t: ckingcfx. I don't need to talk. just for code.) <br/>
+contact the initiator: 729480514@qq.com (w-e-c-h-a-t: ckingcfx. I don't need talk,just for code.) <br/>
 
 
