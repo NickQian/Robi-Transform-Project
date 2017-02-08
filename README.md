@@ -1,4 +1,4 @@
-# rtp (Robi-Transform-Project)
+# Rtp (Robi-Transform-Project)
 # The first "Integrated", "Living-Robot" open source robot project. <br/>
 
 What is "integrated"? <br/>
