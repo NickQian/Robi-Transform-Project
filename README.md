@@ -24,7 +24,7 @@ Hardware:  <br/>
 
 This project is original for improving software and hardware to tranform/improve the lovely Robi robot. <br/>
 2017.2.7 <br/>
-----------------------------------------------------------------------------------------------------------------------------------<br/>
+---------------------------------------------------Background----------------------------------------------------------------------<br/>
 The design of Robi is pretty good. We love it. But the software is not strong. This makes Robi not interest enough.   <br/>
 The well looked robots in the world are only Nao and Robi. Nao is just "designed" but you cannot say it's kind of "Art", but to Robi we can feel "Art". 
 How about the "Pepper"? Jesus, it's absolutely ugly and scared me with a big touch pad. It's even worse than the bandage on the back side of iphone 6:-)   <br/>
@@ -33,7 +33,7 @@ What's Robi: http://www.robo-garage.com/en/prd/p_26/index.html  <br/>
 designed by the 'strange' professor&CEO(ROBOGARAGE.Co.,Ltd) Tomotaka Takahashi  <br/> 
 Hardware & debug progress: http://blog.csdn.net/zister <br/>
 2015.12.12 <br/>
-----------------------------------------------------------------------------------------------------------------------------------<br/>
+------------------------------------------------------Contact---------------------------------------------------------------------<br/>
 contact the initiator: 729480514@qq.com (w-e-c-h-a-t: ckingcfx. I don't need 'chat',just for code.) <br/>
 
 
