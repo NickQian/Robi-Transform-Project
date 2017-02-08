@@ -1,5 +1,5 @@
 # rtp (Robi-Transform-Project)
-rtp, the first "integrated", "living robot" open source robot project. <br/>
+# The first "integrated", "living robot" open source robot project. <br/>
 
 What is "integrated"? <br/>
 When we search for open-source robots online, we find that they are part of the robot code and demo, we can not find a complete project, download it directly to our raspberry pi, power on, and then  it can move, we can play.
