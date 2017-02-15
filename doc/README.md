@@ -3,7 +3,7 @@
 1. HW list:   <br/>
 Raspberry Pi3B + Xunfei XFM10211(USB port) + Robi   <br/>
 
-2. Steps <br/>
+2. Play Steps <br/>
 1) connect robi servo's 'CTRL'(or 'Signal') together and tight them to Pi3's GPIO pin 8&9(TXD0&RXD0). Connect the GND of servo and Pi3.<br/>
 2) I just connect the 5V from GPIO to servo VCC supply. The better way may be providing indepedent power supply to servo's VCC. <br/>
 3) connect a speaker to Pi3's audio jack. <br/>
