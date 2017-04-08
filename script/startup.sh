@@ -2,7 +2,7 @@
 
 # no for demo purpose
 ros_dbg=yes
-cmd_ros_compile="catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /home/pi/pi/toby"
+cmd_ros_compile="catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /home/pi/pi/robi"
 
 cmd_ros_run_servos="rosrun actprocess servos"
 cmd_ros_run_actPattern="rosrun actprocess actPattern.py"
@@ -20,7 +20,7 @@ if [ $ros_dbg = yes ]; then
    echo 'It is DDBBGG mode. openning development windows....'
 
    #--------------------- source edit & compile window-----------------------------
-   terminator --layout=SrcCompileLayout --working-directory=/home/pi/toby_ws/src/audioprocess &
+   terminator --layout=SrcCompileLayout --working-directory=/home/pi/rtp/src/audioprocess &
    sleep 2s
 
    #./send2startup.exp $cmd_ros_compile
@@ -68,7 +68,7 @@ if [ $ros_dbg = yes ]; then
 
 
    # ------dirs to segment last 2 terminals---
-   pcmanfm /home/pi/toby_ws/src &
+   pcmanfm /home/pi/rtp/src &
    pcmanfm /home/pi/Documents/TobyQin/learn /home/pi/Documents/TobyQin/ros/ &
    pcmanfm /home/pi/pi/robi/share/cortex/install  /home/pi/pi/robi/share/visualprocess/install &
 
@@ -79,7 +79,7 @@ if [ $ros_dbg = yes ]; then
 
 
    #expect <<-END
-#	spawn x-terminal-emulator --geometry=600x400+150+500 --working-directory=/home/pi/toby_ws
+#	spawn x-terminal-emulator --geometry=600x400+150+500 --working-directory=/home/pi/rtp
 #	send "$cmd_ros_run_cortexp"
 #	interact
 #	expect eof
