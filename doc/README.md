@@ -6,9 +6,10 @@
                 b) ultrasonic module (search "HC-SR04" in taobao) <br/>
                 c) usb mic (Xunfei XFM10211 usb mic array is a option, you can apply from xunfei)  <br/>
                 d) pi camera(search "pi camera" in taobao)  <br/>
+                e) DC-DC module if you use battery (search "DFRobot DC-DC" in taobao)
    3) use Robi or "Rapiro" or UBTECH "Alpha 1S" for the servos & body.   <br/>
       if use Robi for RTP, you can choose these series: 1-23, 28-33, 36-38, 46-52.    <br/>
-   4) battery & speaker: with Robi or Alpha 1s you already has the battery. you can also search them in taobao.     <br/>
+   4) battery & speaker: with Robi or Alpha 1s(https://item.jd.com/11157080981.html) you already has the battery. you can also search them in taobao.     <br/>
       
 
 2. Play Steps <br/>
