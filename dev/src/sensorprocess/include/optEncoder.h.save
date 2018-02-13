@@ -1,0 +1,28 @@
+/*  c driver for optical encoder(GPIO interrupt)
+    ----
+    Licensed under BSD license.
+    by Nick Qian
+    ----
+    0.1 - 2017.4.27  init version for Raspberry 2B(bcm2836) by Nick Qian
+    ----
+    output: speed of the motor
+    input: GPIO pin()
+*/
+
+#ifndef _OPT_ENCODER_
+#define _OPT_ENCODER_
+
+#define PIN_OPT_ENCODER_1A  RPi2B_GPIO_J8_11
+#define PIN_OPT_ENCODER_1B  RPi2B_GPIO_J8_12
+#define PIN_OPT_ENCODER_2A  RPi2B_GPIO_J8_13
+#define PIN_OPT_ENCODER_2B  RPi2B_GPIO_J8_15
+
+#define INT_NAME_OPT_ENCODER_1A  "INT_OPT_ENCODER_1A"
+#define INT_NAME_OPT_ENCODER_1A  "INT_OPT_ENCODER_1A"
+#define INT_NAME_OPT_ENCODER_1A  "INT_OPT_ENCODER_1A"
+#define INT_NAME_OPT_ENCODER_1A  "INT_OPT_ENCODER_1A"
+
+
+
+
+#endif

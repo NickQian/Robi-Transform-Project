@@ -1,0 +1,19 @@
+/*  i2c api (on pi 2B using "/dev/i2c-1") of RTP project
+    ----
+    Licensed under BSD license.
+    ----
+    0.1 - 2017.3.10  init version for Raspberry 2B(bcm2836) - by Nick Qian
+    ----
+*/
+
+#ifndef _IIC_H_
+  #define _IIC_H_
+
+const  char *iicFileName = (char *)"/dev/i2c-1";
+
+uint8_t iicWrByte(uint8_t data, uint8_t addr);
+uint8_t iicRdByte(uint8_t *rdBuf, uint8_t addr, uint16_t num);
+uint8_t iicWrBytes(uint8_t *wrBuf, uint8_t addr, uint8_t num);
+
+
+#endif
