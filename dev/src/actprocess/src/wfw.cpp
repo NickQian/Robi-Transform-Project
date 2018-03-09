@@ -17,7 +17,7 @@
 #include "wfw.h"
 #include "pwm.h"
 #include "peri.h"
-//#include <sensorprocess/attt.h>
+//#include <sensorprocess/att.h>
 
 using namespace std;
 
@@ -44,8 +44,8 @@ const cfg_wfw_t cfg_wfw = {
 
     .accYzero = 0.0f,
     .accZzero = 0.0f,
-    .leftMotorScaler  = 0.01,  //1.0f,
-    .rightMotorScaler = 0.01    //1.0f
+    .leftMotorScaler  = 0.1f,   //1.0f,   //dbg:0.1f
+    .rightMotorScaler = 0.1f    //1.0f
 };
 
 
@@ -92,7 +92,7 @@ void wfwAction::moveMotors(double PIDValue, double turning)
 /*****************************************************************
 /* speedRaw & PIDsum: 1% - 100%
 /* <PIDsum> is unsinged
-/******************************************************************/
+/******************************************************************
 
 int32_t wfwAction::pwmCalculate(double PIDsum, uint32_t max_width)
 {
@@ -112,7 +112,7 @@ int32_t wfwAction::pwmCalculate(double PIDsum, uint32_t max_width)
     return pwmValue;
 
 }
-
+*/
 
 /*******************************
 /*  this is moving single motor
@@ -129,13 +129,13 @@ void wfwAction::moveMotor(WfwMotor motor, WfwCommand direct, double PIDres)
     //// left ////
     if (motor == motor_footL){
         if (direct == forward){
-            pwm_dat = pwmCalculate(PIDres, PWM_EMU_WIDTH_MAX);
+            pwm_dat = pwmCalculate(PIDres, PWM_HW_WIDTH_MAX);
             bc_pwm_set(pwm_INA1, (uint32_t)pwm_dat);      // PWM_CH_LEFT_FOOT_A
 
             GPIO_Write(LEFT_FOOT_B_PIN, 0);            //leftB = LOW;
         }
         else{
-            pwm_dat = pwmCalculate(PIDres, PWM_EMU_WIDTH_MAX);
+            pwm_dat = pwmCalculate(PIDres, PWM_HW_WIDTH_MAX);
             bc_pwm_set(pwm_INB1, (uint32_t)pwm_dat);
 
             GPIO_Write(LEFT_FOOT_A_PIN, 0);           // leftA = LOW
@@ -229,7 +229,7 @@ wfwAction::wfwAction(std::string name):
     sub_ = nh_.subscribe("node_sens_att/tpc_sens_att", 1, &wfwAction::analysisCB, this);       //("/tpc_sens_attt",
 
     as_.start();
-    cout << "@~@: as_.started.... " << endl;
+    cout << "@~@: as_.started.Waiting for IMU|goal msg..... " << endl;
 }
 
 
@@ -304,11 +304,19 @@ void wfwAction::analysisCB(const sensor_msgs::ImuConstPtr& msg)              // 
     as_.publishFeedback(feedback_);
 
     //////// result ///////
-    if ( abs(pitch_) < cfg_wfw.err_tolerance){
-        as_.setSucceeded(result_);
-        printf("!Succeed once. as_ will not be active.");
+    if (abs(pitch_) < cfg_wfw.err_tolerance){
+        if( !goal_.keep_balance){
+            as_.setSucceeded(result_);
+            printf("!Succeed & not keep balance. as_ will not be active. \n");
+        }
+        else      // keep balance and reach
+            printf("!! Succeed once. \n");
     }
     else{
+        if(!goal_.keep_balance)    // not reach and will not try
+            as_.setAborted(result_);
+        else
+            printf("*");
     }
 
 }
@@ -347,6 +355,8 @@ void wfwAction::executeCB(const actprocess::wfwGoalConstPtr &goal)
 
 wfwAction::~wfwAction(void)
 {
+    PWM_Emu_Shutdown();
+    printf("In ~wfwAction and Emu already shutdown. \n");
 
 }
 

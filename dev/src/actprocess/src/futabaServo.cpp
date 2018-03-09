@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <signal.h>
 
 #include "uart0.h"
 #include "peri.h"       // for delay_ms()/uart define/tx pin to be input
@@ -56,12 +57,24 @@ Futaba_ShortPacketCmd init_Futaba_ShortPacketCmd =
 
 
 
- /*  90.0 degree = 900(0384H), 5 sec = 500 (01F4H)
- Hdr   ID  Flg | Adr Len Cnt Dat           Sum
- FA AF 01  00  | 1E  04  01  84  03 F4 01  68     //? LSB to MSB?    */
-static Futaba_ShortPacket  *shortPacketWr  = (Futaba_ShortPacket *) malloc(sizeof( Futaba_ShortPacket));       // C++
+ /*  90.0 degree = 900(0384H), 5 sec = 500 (01F4H) */
+static Futaba_ShortPacket  *shortPacketWr  = (Futaba_ShortPacket *) malloc(sizeof( Futaba_ShortPacket));
 static Futaba_ReturnPacket *returnPacketRd = (Futaba_ReturnPacket *) malloc(sizeof(Futaba_ReturnPacket));      // return packet
 static Futaba_LongPacket   *longPacketWr   = (Futaba_LongPacket *) malloc(sizeof (Futaba_LongPacket));         // for future usage
+
+
+
+//////////////////////////////////////////////////
+void futaba_shutdown(void)
+{
+
+    free(shortPacketWr);
+    free(returnPacketRd);
+    free(longPacketWr);
+    printf("<futaba_shutdown>. mem freed. \n");
+
+}
+
 
 ////////////////Call peripheral driver////////////
 

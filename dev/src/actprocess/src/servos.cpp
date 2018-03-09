@@ -49,6 +49,9 @@ public:
 
    ~servoAction(void)
    {
+    futaba_shutdown();
+    printf("In <~servoAction> and mem freed. \n");
+
     }
 
    void executeCB(const actprocess::servosGoalConstPtr &goal){

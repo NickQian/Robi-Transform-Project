@@ -24,12 +24,30 @@ static volatile uint32_t *bcm283x_pwm_vm = 0;
 static uint16_t pulse_width_incr_us = -1;
 
 
-/*************** WHW PWMs Generator ******************/
-// move to wfw.cpp
 
-//void wfw_pwm_gen(double PIDValue, double turning)
-//{
-//}
+/*****************************************************************
+/* speedRaw & PIDsum: 1% - 100%
+/* <PIDsum> is unsinged
+/******************************************************************/
+
+int32_t pwmCalculate(double PIDsum, uint32_t max_width)
+{
+    double speedRaw;             // 1-100
+    int32_t pwmValue;
+
+    if (PIDsum > 100.0f){
+        speedRaw = 100.0f;
+    }
+    else{
+        speedRaw = PIDsum;
+    }
+
+    // scale from 0-100 to (0- pwm value)
+    pwmValue = speedRaw * ((float)max_width) / 100.f;
+
+    return pwmValue;
+
+}
 
 
 
@@ -70,15 +88,13 @@ int pwm_hw_set(WfwPWM pwm_ch, uint32_t pwm_width, uint32_t width_start)
     volatile uint32_t *pwm_rng2 = bcm283x_pwm_vm + PWM_RNG2_OFFSET/4;
 
     if(pwm_ch==pwm_INA1){
-        //writeAddr32(pwm_dat1, int32_t(pwm_width) );
-         *pwm_dat1 = pwm_width;
-        cout << "PWM_DAT1 set done. width: "<< pwm_width << ".Read Value now is:" <<  dec << *pwm_dat1 << ". PWM_RNG1: "<< *pwm_rng1 <<endl;
+        writeAddr32(pwm_dat1, int32_t(pwm_width) );
+        cout << "PWM_DAT1 set done. width: "<< pwm_width << ".Read:" <<  dec << *pwm_dat1 << ". PWM_RNG1: "<< *pwm_rng1 << ".PWM_DAT2:" << *pwm_dat2 <<endl;
         return 0;
     }
     else if(pwm_ch==pwm_INB1){
-         *pwm_dat2 = pwm_width;
-        //writeAddr32(pwm_dat2, int32_t(pwm_width) );
-        cout << "PWM_DAT2 set done. width: "<< pwm_width << ".Read value now is:" <<  dec << *pwm_dat2 << ". PWM_RNG2: "<< *pwm_rng2 <<endl;
+        writeAddr32(pwm_dat2, int32_t(pwm_width) );
+        cout << "PWM_DAT2 set done. width: "<< pwm_width << ".Read:" <<  dec << *pwm_dat2 << ". PWM_RNG2: "<< *pwm_rng2 <<".PWM_DAT1:" << *pwm_dat1 <<endl;
         return 0;
     }
     else{
@@ -115,11 +131,12 @@ int pwm_emu_set(WfwPWM pwm_ch, uint32_t pwm_width, uint32_t width_start){
     int gpio = (pwm_ch==pwm_INA2) ? GPIO_PIN_EMU_PWM_INA_2 : GPIO_PIN_EMU_PWM_INB_2;
 
 //    PWM_Emu_AddChPulse( (uint8_t)pwm_ch, gpio, width_start, pwm_width);   // Note: (int ch_num, int gpio, int width_start, int width);
-    if(pwm_ch==pwm_INA2)
+    if(pwm_ch==pwm_INA2){
         PWM_Emu_AddChPulse(0, gpio, width_start, pwm_width);
-    else if(pwm_ch==pwm_INB2)
+    }
+    else if(pwm_ch==pwm_INB2){
         PWM_Emu_AddChPulse(1, gpio, width_start, pwm_width);
-
+    }
 }
 
 
