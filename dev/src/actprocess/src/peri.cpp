@@ -429,15 +429,16 @@ uint32_t PWM_Init(void){
 
 int PWM_Emu_Init(void)
 {
-    if(mknod(MBFILE, S_IFCHR|0600, makedev(249, 0)) < 0)
-        return fatal("Failed to creat mailbox device \n");
+    //if(mknod(MBFILE, S_IFCHR|0600, makedev(249, 0)) < 0)
+    //    return fatal("<Pwm_Emu_Init>: Failed to creat mailbox device \n");
 
     mbox.handle = mbox_open();
     if(mbox.handle < 0)
-        return fatal("Failed to open mailbox \n");
+        return fatal("<Pwm_Emu_Init>: Failed to open mailbox \n");
 
     PWM_Emu_Ch_Init(0);
     PWM_Emu_Ch_Init(1);
+
 }
 
 //---------- Init single channel --------
@@ -530,9 +531,6 @@ static void init_dma_pcm_hw(uint32_t ch_num)
                  pwm_emu_chs[ch_num].dma_reg[DMA_TI_],      pwm_emu_chs[ch_num].dma_reg[DMA_SOURCE_AD_], pwm_emu_chs[ch_num].dma_reg[DMA_DEST_AD_], \
                  pwm_emu_chs[ch_num].dma_reg[DMA_TXFR_LEN_],pwm_emu_chs[ch_num].dma_reg[DMA_STRIDE_],    pwm_emu_chs[ch_num].dma_reg[DMA_NEXTCONBK_] );
 
-    printf("~~DMA_INT_ status: 0x%x, DMA_ENABLE_ status: 0x%x  \n", pwm_emu_chs[ch_num].dma_reg[DMA_INT_],pwm_emu_chs[ch_num].dma_reg[DMA_ENABLE_]);
-
-
 
     // Enable PCM Tx finally
     pcm_reg[PCM_CS_A_] |=  1<<2;
@@ -541,8 +539,8 @@ static void init_dma_pcm_hw(uint32_t ch_num)
     pwm_emu_chs[ch_num].dma_reg[DMA_CS_] = 0x10880001; // 0x10880001;        // go, mid priority, wait for outstanding writes
 
 
-    uint32_t tmp[200][9];
-    for(int i=0; i< 200; i++){
+    uint32_t tmp[10][9];
+    for(int i=0; i< 10; i++){
         tmp[i][0] = pwm_emu_chs[ch_num].dma_reg[DMA_CS_];
         tmp[i][1] = pwm_emu_chs[ch_num].dma_reg[DMA_CONBLK_AD_];
         tmp[i][2] = pwm_emu_chs[ch_num].dma_reg[DMA_DEBUG_];
@@ -556,7 +554,7 @@ static void init_dma_pcm_hw(uint32_t ch_num)
         delay_us(700);
     }
 
-    for(int i=0; i< 200; i++){
+    for(int i=0; i< 10; i++){
         printf("~go~ CS: 0x%x,CONBLK_AD:0x%x,DEBUG:0x%x,TI:0x%x,SRC:0x%x,DEST:0x%x,LEN:0x%x,STR:0x%x,NEXT:0x%x.\n",   \
          tmp[i][0], tmp[i][1],   tmp[i][2], tmp[i][3], tmp[i][4], tmp[i][5], tmp[i][6], tmp[i][7], tmp[i][8]);
     }
@@ -802,18 +800,19 @@ int PWM_Emu_AddChPulse(uint32_t ch_num, int gpio, int width_start, int width)
     //pwm_emu_sta_check(ch_num, (uint32_t)gpio, (uint32_t *)cbp, dp);  // for debug
     printf("---------------- add pulse done. ---------------- \n");
 
+
     return EXIT_SUCCESS;
 }
 
 
 void pwm_emu_sta_check(uint32_t ch_num, uint32_t pin_num, uint32_t *cbp, uint32_t *dp)
 {
+    volatile uint32_t *pcm_reg = bcm283x_pcm_vm;
+    volatile uint32_t *clk_reg = bcm283x_clk_vm;
+
     volatile uint32_t *gpset0_1 = bcm283x_gpio_vm + GPSET0_OFFSET/4 + pin_num/32;  // if >32, will access to GPSEL1
     volatile uint32_t *gpclr0_1 = bcm283x_gpio_vm + GPCLR0_OFFSET/4 + pin_num/32;
     volatile uint32_t *gpfsel0  = bcm283x_gpio_vm + GPFSEL0_OFFSET/4;
-
-    volatile uint32_t *pcm_reg = bcm283x_pcm_vm;
-    volatile uint32_t *clk_reg = bcm283x_clk_vm;
 
     printf("<emu_check> ch:%d: CS:0x%x,CONBLK_AD:0x%x,DEBUG:0x%x, TI:0x%x,SOURCE_AD:0x%x,DEST_AD:0x%x, TXFR_LEN:0x%x,STRIDE:0x%x,NEXTCONBK:0x%x, \n", ch_num, \
          pwm_emu_chs[ch_num].dma_reg[DMA_CS_],      pwm_emu_chs[ch_num].dma_reg[DMA_CONBLK_AD_], pwm_emu_chs[ch_num].dma_reg[DMA_DEBUG_], \
@@ -821,21 +820,6 @@ void pwm_emu_sta_check(uint32_t ch_num, uint32_t pin_num, uint32_t *cbp, uint32_
          pwm_emu_chs[ch_num].dma_reg[DMA_TXFR_LEN_],pwm_emu_chs[ch_num].dma_reg[DMA_STRIDE_],    pwm_emu_chs[ch_num].dma_reg[DMA_NEXTCONBK_] );
 
 //    printf("~ gpset0:0x%x, gpclr0:0x%x, gpfsel0:0x%x, pin5:0x%x, pin6:0x%x  \n", *gpset0_1, *gpclr0_1, *gpfsel0, (*gpfsel0 >> 18)&0x7, (*gpfsel0 >> 15)&0x7 );
-
-//    cout << "~~~ cb1/cb2/cb3... " << hex << showbase   \
-//          << *cbp     << "|" << *(cbp+1) << "|"  << *(cbp+2) << "|"  << *(cbp+3) << "|" << *(cbp+4)  << "|" << *(cbp+5)  << "|"   \
-//          << *(cbp+8) << "|" << *(cbp+9) << "|"  << *(cbp+10)<< "|"  << *(cbp+11)<< "|" << *(cbp+12) << "|" << *(cbp+13) << "|"   \
-//          << *(cbp+16)<< "|" << *(cbp+17)<< "|"  << *(cbp+18)<< "|"  << *(cbp+19)<< "|" << *(cbp+20) << "|" << *(cbp+21) << "|"   \
-//          << *(cbp+24)<< "|" << *(cbp+25)<< "|"  << *(cbp+26)<< "|"  << *(cbp+27)<< "|" << *(cbp+28) << "|" << *(cbp+29) << "|"   \
-//          << *(cbp+32)<< "|" << *(cbp+33)<< "|"  << *(cbp+34)<< "|"  << *(cbp+35)<< "|" << *(cbp+36) << "|" << *(cbp+37) << "|"   \
-//          << *(cbp+40)<< "|" << *(cbp+41)<< "|"  << *(cbp+42)<< "|"  << *(cbp+43)<< "|" << *(cbp+44) << "|" << *(cbp+45) << "|"   \
-//          << *(cbp+48)<< "|" << *(cbp+49)<< "|"  << *(cbp+50)<< "|"  << *(cbp+51)<< "|" << *(cbp+52) << "|" << *(cbp+53) << "|"   \
-//          << *(cbp+56)<< "|" << *(cbp+57)<< "|"  << *(cbp+58)<< "|"  << *(cbp+59)<< "|" << *(cbp+60) << "|" << *(cbp+61) << "|"   \
-//
-//          << "| data:" << *dp  << "|" << *(dp+1)  << "|"  << *(dp+2)  << "|"   \
-//                  << *(dp+pwm_emu_chs[ch_num].num_samples-2) << "|" << *(dp+pwm_emu_chs[ch_num].num_samples-1) \
-//          << endl;
-
 
     printf("~~~ PCM_CS_A:0x%x, PCM_TXC_A:0x%x, PCM_MODE_A:0x%x, PCM_DREQ_A:0x%x. \n", pcm_reg[PCM_CS_A_],pcm_reg[PCM_TXC_A_],pcm_reg[PCM_MODE_A_],pcm_reg[PCM_DREQ_A_]);
 
