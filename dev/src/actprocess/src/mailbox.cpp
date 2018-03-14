@@ -32,10 +32,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <unistd.h>
 #include <assert.h>
 #include <stdint.h>
+#include <errno.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #include "mailbox.h"
+
+//#define DEBUG
 
 #define PAGE_SIZE (4*1024)
 
@@ -84,17 +89,27 @@ void *unmapmem(void *addr, unsigned size)
 
 static int mbox_property(int file_desc, void *buf)
 {
-   int ret_val = ioctl(file_desc, IOCTL_MBOX_PROPERTY, buf);
+   int fd = file_desc;
+   int ret_val = -1;
 
-   if (ret_val < 0) {
-      printf("ioctl_set_msg failed:%d\n", ret_val);
+   if (fd < 0) {
+      fd = mbox_open();
    }
+   if (fd >= 0) {
+      ret_val = ioctl(fd, IOCTL_MBOX_PROPERTY, buf);
 
+      if (ret_val < 0) {
+         printf("ioctl_set_msg failed, errno %d: %m\n", errno);
+      }
+   }
 #ifdef DEBUG
    unsigned *p = buf; int i; unsigned size = *(unsigned *)buf;
    for (i=0; i<size/4; i++)
       printf("%04x: 0x%08x\n", i*sizeof *p, p[i]);
 #endif
+   if (file_desc < 0)
+      mbox_close(fd);
+
    return ret_val;
 }
 
@@ -102,7 +117,10 @@ unsigned mem_alloc(int file_desc, unsigned size, unsigned align, unsigned flags)
 {
    int i=0;
    unsigned p[32];
-printf("Requesting %d bytes\n", size);
+
+#ifdef DEBUG
+   printf("Requesting %d bytes\n", size);
+#endif
    p[i++] = 0; // size
    p[i++] = 0x00000000; // process request
 
@@ -116,8 +134,10 @@ printf("Requesting %d bytes\n", size);
    p[i++] = 0x00000000; // end tag
    p[0] = i*sizeof *p; // actual size
 
-   mbox_property(file_desc, p);
-   return p[5];
+   if (mbox_property(file_desc, p) < 0)
+      return -1;
+   else
+      return p[5];
 }
 
 unsigned mem_free(int file_desc, unsigned handle)
@@ -154,8 +174,10 @@ unsigned mem_lock(int file_desc, unsigned handle)
    p[i++] = 0x00000000; // end tag
    p[0] = i*sizeof *p; // actual size
 
-   mbox_property(file_desc, p);
-   return p[5];
+   if (mbox_property(file_desc, p) < 0)
+      return ~0;
+   else
+      return p[5];
 }
 
 unsigned mem_unlock(int file_desc, unsigned handle)
@@ -243,19 +265,37 @@ unsigned execute_qpu(int file_desc, unsigned num_qpus, unsigned control, unsigne
    return p[5];
 }
 
-int mbox_open() {
+int mbox_open(void) {
    int file_desc;
+   char filename[64];
 
    // open a char device file used for communicating with kernel mbox driver
-   file_desc = open(DEVICE_FILE_NAME, 0);
-   if (file_desc < 0) {
-      printf("Can't open device file: %s\n", DEVICE_FILE_NAME);
-      printf("Try creating a device file with: sudo mknod %s c %d 0\n", DEVICE_FILE_NAME, MAJOR_NUM);
-      exit(-1);
+   if ((file_desc = open("/dev/vcio", 0)) >= 0) {
+      /* New kernel, we use /dev/vcio, major 249, since kernel 4.1 */
+      printf(">>>>>>>>>>>>>>> new kernel >4.1. mbox opened >>>>>>>>>>>>>>>>> \n");
+      return file_desc;
    }
+
+   printf(">>>>>>>>>>>>>>> old kernel <4.1 >>>>>>>>>>>>>>>>> \n");
+   /* Most likely an old kernel, so drop back to the old major=100 device */
+   sprintf(filename, "/tmp/mailbox-%d", getpid());
+   unlink(filename);
+   if (mknod(filename, S_IFCHR|0600, makedev(100, 0)) < 0) {
+      printf("Failed to create mailbox device %s: %m\n", filename);
+      return -1;
+   }
+   file_desc = open(filename, 0);
+   if (file_desc < 0) {
+      printf("Can't open device file %s: %m\n", filename);
+      unlink(filename);
+      return -1;
+   }
+   unlink(filename);
+
    return file_desc;
 }
 
 void mbox_close(int file_desc) {
-  close(file_desc);
+   close(file_desc);
+   printf(">>>>>>>>>>>>>>>  mbox closed >>>>>>>>>>>>>>>>> \n");
 }
